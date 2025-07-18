@@ -1,113 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huế Festival</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Phan dau logo, menu -->
+        <div class="background-blur"></div>
         <div class="header">
-            <div class="logoHue">
-
-            </div>
-            <div class="menu">
-
-            </div>
-            <div class="logoTeam">
-
+            <div class="header-content-box flex-container jc-between">
+                <div class="logoHue">
+                    <img src="./img/logo.jpg" alt="logo_1">
+                </div>
+                <div class="menu">
+                    <ul id="nav">
+                        <li><a href="#introduce">Giới thiệu</a></li>
+                        <li>
+                            <span>Khám phá</span>
+                            <ul class="subnav">
+                                <li><a href="#location">Lăng tẩm</a></li>
+                                <li><a href="#food">Ẩm thực</a></li>
+                                <li><a href="#art">Nghệ thuật</a></li>
+                                <li><a href="#village">Làng nghề</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="logoTeam">
+                    <img src="./img/logo_2.jpg" alt="logo_2">
+                </div>
             </div>
         </div>
 
         <!-- Noi dung -->
         <div class="main">
             <div class="main_video">
-                <video src=""></video>
+                <video src="#" width="100%" autoplay loop playsinline>
+                </video>
             </div>
-            <div class="main_introduce">
-                <h2 class="introduce_title">Giới Thiệu</h2>
-                <p class="introduce_text"></p>
+            <div id="introduce" class="main_introduce mt-64">
+                <h2 class="introduce_title title-font">Giới Thiệu</h2>
+                <p class="introduce_text mt-32">
+                    The NVIDIA RTX 50 series, powered by the cutting-edge **Blackwell architecture**, represents a
+                    significant leap forward in graphics processing. Unveiled at CES 2025, these GPUs are designed to
+                    redefine performance for gamers, creators, and AI professionals.
+
+                    A core innovation is the **Blackwell architecture** itself, featuring more efficient transistors,
+                    increased core counts, and a substantial boost in memory bandwidth thanks to the adoption of **GDDR7
+                    memory**. This allows the RTX 50 series to handle the most demanding tasks with unprecedented ease.
+                    For instance, the flagship RTX 5090 is reported to deliver up to 50% higher frame rates at 4K
+                    resolution compared to its predecessor.
+
+                    Beyond raw performance, the RTX 50 series places a heavy emphasis on **AI acceleration**. It
+                    introduces **DLSS 4.0**, with advanced features like Multi Frame Generation and transformer-based
+                    models, significantly improving framerates and image quality through AI-driven upscaling. New AI
+                    hardware is integrated to boost performance across various workloads, and an AI management processor
+                    (AMP) helps optimize task allocation.
+
+                    The lineup spans from the enthusiast-grade **RTX 5090** and **RTX 5080** (launched in January 2025)
+                    to the **RTX 5070 Ti**, **RTX 5070**, **RTX 5060 Ti**, and **RTX 5060** (rolling out through
+                    February to June 2025). Mobile variants are also available, bringing Blackwell's power to laptops.
+                    The RTX 50 series is poised to set new standards in gaming realism, content creation, and AI-driven
+                    applications.
+                </p>
             </div>
-            <div class="main_location">
-                <div class="location_address">
-                    <div class="location_img">
-                        <img src="" alt="">
+            <div id="location" class="main_location mt-64">
+                <h2 class="main_title title-font">Lăng Tẩm</h2>
+                <div class="location-content-box flex-container jc-between mt-32">
+                    <div class="location_address">
+                        <div class="location_img">
+                            <img src="./img/bienThuanAn_background.jpg" alt="">
+                        </div>
+                        <div class="location_info">
+                            <h3 class="location_title">Phá Tam Giang</h3>
+                            <button class="btn">Xem Thêm</button>
+                        </div>
                     </div>
-                    <div class="location_info">
-                        <h3 class="location_title"></h3>
-                        <button class="btn">Xem Thêm</button>
-                    </div>
-                </div>
 
-                <div class="location_address">
-                    <div class="location_img">
-                        <img src="" alt="">
+                    <div class="location_address">
+                        <div class="location_img">
+                            <img src="./img/thuanan_img.png" alt="">
+                        </div>
+                        <div class="location_info">
+                            <h3 class="location_title">Biển Thuận An</h3>
+                            <button class="btn"><span>Xem Thêm</span></button>
+                        </div>
                     </div>
-                    <div class="location_info">
-                        <h3 class="location_title"></h3>
-                        <button class="btn">Xem Thêm</button>
-                    </div>
-                </div>
 
-                <div class="location_address">
-                    <div class="location_img">
-                        <img src="" alt="">
+                    <div class="location_address">
+                        <div class="location_img">
+                            <img src="./img/thien-mu-pagoda-thumb.jpg" alt="">
+                        </div>
+                        <div class="location_info">
+                            <h3 class="location_title">Chùa Thiên Mụ</h3>
+                            <button class="btn"><span>Xem Thêm</span></button>
+                        </div>
                     </div>
-                    <div class="location_info">
-                        <h3 class="location_title"></h3>
-                        <button class="btn">Xem Thêm</button>
-                    </div>
-                </div>
 
-                <div class="location_address">
-                    <div class="location_img">
-                        <img src="" alt="">
-                    </div>
-                    <div class="location_info">
-                        <h3 class="location_title"></h3>
-                        <button class="btn">Xem Thêm</button>
+                    <div class="location_address">
+                        <div class="location_img">
+                            <img src="./img/city_wallpaper_2.jpg" alt="">
+                        </div>
+                        <div class="location_info">
+                            <h3 class="location_title">Amazon</h3>
+                            <button class="btn"><span>Xem Thêm</span></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="main_food">
-                <h3 class="main_title"></h3>
-                <div class="main_item">
-                    <div class="item_img">
-                        <img src="" alt="">
+            <div id="food" class="main_food mt-64">
+                <h2 class="main_title title-font">Ẩm Thực</h2>
+                <div class="slider-wrapper mt-32">
+                    <div class="food-track">
+                        <div class="main_item">
+                            <div class="item_img">
+                                <img src="./img/banh_nam.jpg" alt="">
+                            </div>
+                            <div class="item_content">
+                                <h4 class="content_header">GeForce RTX 50 Series</h4>
+                                <p class="content_text">
+                                    Powered by NVIDIA Blackwell, GeForce
+                                    RTX™ 50 Series GPUs bring game-changing
+                                    capabilities to gamers and creators.
+                                    Equipped with a massive level of AI
+                                    horsepower, the RTX 50 Series enables
+                                    new experiences and next-level graphics
+                                    fidelity. Multiply performance with NVIDIA
+                                    DLSS 4, generate images at unprecedented
+                                    speed, and unleash your creativity with
+                                    NVIDIA Studio.
+                                    Gigabyte's GeForce RTX 5090 is
+                                    shaping up to be a performance
+                                    monster. With its Blackwell
+                                    architecture and immense VRAM,
+                                    it's expected to deliver smooth
+                                    8K gaming and superior AI processing
+                                    capabilities. Gigabyte's massive
+                                    WINDFORCE cooling system will be
+                                    crucial in managing the temperatures
+                                    of this powerful chip, ensuring stable
+                                    performance even under heavy loads. This
+                                    will undoubtedly be a top choice for
+                                    gamers and professionals demanding
+                                    absolute performance.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="main_item">
+                            <div class="item_img">
+                                <img src="./img/laptop_30s.jpg" alt="">
+                            </div>
+                            <div class="item_content">
+                                <h4 class="content_header">GeForce RTX 30 Series Laptops</h4>
+                                <p class="content_text">
+                                    NVIDIA® GeForce RTX™ 30 Series Laptop
+                                    GPUs deliver high performance for
+                                    gamers and creators. They’re built
+                                    with Ampere—NVIDIA’s 2nd gen RTX
+                                    architecture—to give you the most
+                                    realistic ray-traced graphics and
+                                    cutting-edge AI features like NVIDIA
+                                    DLSS. Plus, Max-Q Technologies unleash
+                                    the power of AI to make thin high-performance
+                                    laptops.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="main_item">
+                            <div class="item_img">
+                                <img src="./img/rtx_40s.jpg" alt="">
+                            </div>
+                            <div class="item_content">
+                                <h4 class="content_header">GeForce RTX 40 Series</h4>
+                                <p class="content_text">
+                                    NVIDIA® GeForce RTX™ 40 Series GPUs
+                                    are beyond fast for gamers and creators.
+                                    They're powered by the ultra-efficient
+                                    NVIDIA Ada Lovelace architecture which
+                                    delivers a quantum leap in both performance
+                                    and AI-powered graphics. Experience lifelike
+                                    virtual worlds with ray tracing and ultra-high
+                                    FPS gaming with the lowest latency. Discover
+                                    revolutionary new ways to create and unprecedented
+                                    workflow acceleration.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item_content">
-
-                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">
+                        <i class="fa fa-angle-left"></i>
+                    </button>
+                    <button class="next" onclick="moveSlide(1)">
+                        <i class="fa fa-angle-right"></i>
+                    </button>
                 </div>
-
             </div>
-            <div class="main_art">
-                <h3 class="main_title"></h3>
-                <div class="main_item">
-                    <div class="item_img">
-                        <img src="" alt="">
+            <div id="art" class="main_art mt-64">
+                <h2 class="main_title title-font">Nghệ thuật</h2>
+                <div class="art-content-box flex-container">
+                    <div class="main_item">
+                        <div class="item_img">
+                            <a href="">
+                                <img src="./img/art_nhaNhacCungDinh.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="item_content">
+                            <div class="content_textbox">
+                                <h3 class="content_header">Nhã Nhạc Cung Đình Huế</h3>
+                                <p class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Eos, est?
+                            </div>
+                        </div>
                     </div>
-                    <div class="item_content">
-
+                    <div class="main_item">
+                        <div class="item_img">
+                            <a href="">
+                                <img src="./img/art_tuongHue.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="item_content">
+                            <h3 class="content_header">Tuồng Huế</h3>
+                            <p class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                                est?
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="item_img">
+                            <a href="">
+                                <img src="./img/art_caHue.jpeg" alt="">
+                            </a>
+                        </div>
+                        <div class="item_content">
+                            <h3 class="content_header">Ca Huế</h3>
+                            <p class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
+                                est?
+                        </div>
                     </div>
                 </div>
-
             </div>
-            <div class="main_craftVillage">
-                <h3 class="main_title"></h3>
-                <div class="main_item">
-                    <div class="item_img">
-                        <img src="" alt="">
+            <div id="village" class="main_craftVillage mt-64">
+                <h2 class="main_title title-font">Làng Nghề</h2>
+                <div class="craft_village_content_box flex-container">
+                    <div class="main_item">
+                        <div class="item_img">
+                            <img src="./img/artvillage_langHuongThuyXuan.jpg" alt="">
+                        </div>
+                        <div class="item_content">
+                            <div class="content_textbox">
+                                <h3 class="textbox_header">Làng Hương Thủy Xuân</h3>
+                                <p class="textbox_text">Nơi gìn giữ tinh hoa truyền thống hơn 700 năm</p>
+                            </div>
+                            <div class="content_btn">
+                                <button>Tìm hiểu thêm</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="item_content">
-
+                    <div class="main_item">
+                        <div class="item_img">
+                            <img src="./img/artvillage_langDucDongPhuongDuc.jpg" alt="">
+                        </div>
+                        <div class="item_content">
+                            <div class="content_textbox">
+                                <h3 class="textbox_header">Làng đúc đồng Phường Đúc</h3>
+                                <p class="textbox_text">Tinh hoa kim loại hơn 400 năm lịch sử</p>
+                            </div>
+                            <div class="content_btn">
+                                <button>Tìm hiểu thêm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_item">
+                        <div class="item_img">
+                            <img src="./img/artvillage_dieuKhacMyXuyen_1.jpg" alt="">
+                        </div>
+                        <div class="item_content">
+                            <div class="content_textbox">
+                                <h3 class="textbox_header">Làng nghề điêu khắc gỗ Mỹ Xuyên</h3>
+                                <p class="textbox_text">Nơi lưu giữ hồn xưa đất Huế</p>
+                            </div>
+                            <div class="content_btn">
+                                <button>Tìm hiểu thêm</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
-        <div class="footer"></div>
     </div>
+    <div class="footer mt-64">
+        <h2>Footer</h2>
+    </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
+
 </html>

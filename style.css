@@ -1,0 +1,449 @@
+/*Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*CSS Dung Chung*/
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.mt-64{
+    margin-top: 64px !important;
+}
+.mt-32{
+    margin-top: 32px !important;
+}
+.flex-container{
+    display: flex;
+}
+.jc-between{
+    justify-content: space-between !important;
+}
+.jc-around{
+    justify-content: space-around !important;
+}
+.title-font{
+    font-family: 'Dancing Script', cursive !important;
+}
+/*Grid CSS*/
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: minmax(60px,auto);
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    
+}
+/*Lam mo background*/
+.background-blur {
+    position: fixed;
+    top: 0px; left: 0; right: 0; bottom: 0;
+    background-image: url(./img/dai_noi_hue_02.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/*Header CSS*/
+.header {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.header .header-content-box{
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+.header .logoHue img,
+.header .logoTeam img{
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.header .menu #nav{
+    width: 300px;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+    padding: 5px 0px;
+}
+#nav > li > span,
+#nav > li > a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    line-height: 50px;
+}
+#nav > li:hover > span,
+#nav > li:hover > a {
+    display: block;
+    color: #E30019;
+    cursor: pointer;
+}
+/*SubNav CSS*/
+#nav .subnav{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 200px;
+    z-index: 101;
+
+}
+#nav li:hover .subnav {
+    display: block;
+    border: 0.3px solid #ccc;
+    animation: fadein ease-in 0.3s; /*chuyen dong subnav*/
+}
+#nav .subnav li{
+    list-style: none;
+    display: block;
+    padding: 8px 16px;
+}
+#nav .subnav a{
+    text-decoration: none;
+    color: #000;
+}
+#nav .subnav li:hover{
+    background-color: #a09d9d;
+    cursor: pointer;
+
+}
+@keyframes fadein{
+    from{
+        top:50%;
+        opacity: 0;
+    }
+    to{
+        top: 100%;
+        opacity: 1;
+    }
+}
+
+/*Main CSS*/
+/*Main > Location CSS*/
+.main {
+    grid-area: main;
+    color: #000;
+}
+.main_video video{
+    display: block;
+    margin: 0px auto;
+}
+.main_introduce{
+    width: 1200px;
+    margin: 0px auto;
+    scroll-margin-top: 50px;
+}
+.main_introduce .introduce_title{
+    text-align: center;
+    font-size: 50px;
+}
+.main_introduce .introduce_text{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 700;
+}
+/*Main > Location CSS*/
+.main_location{
+    text-align: center;
+    scroll-margin-top: 50px;
+}
+.main_location .main_title{
+    font-size: 50px;
+}
+.main_location .location-content-box{
+    width: 1200px;
+    margin: 0px auto;
+}
+.location_address{
+    width: 24%;
+    position: relative;
+    cursor: pointer;
+}
+
+.location_address .location_img img{
+    display: block;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    transition: filter 0.3s;
+}
+/* Overlay trắng mờ */
+.location_address .location_img::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.7);
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+.location_address:hover .location_img::after {
+    opacity: 1;
+}
+.location_address .location_info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: none;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 80%;
+    color: #222;
+}
+.location_address:hover .location_info {
+    opacity: 1;
+}
+
+.location_address .location_info .location_title{
+    padding: 10px 0px;
+}
+/*Chat gpt chi animation hover*/
+.location_address .location_info .btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right,#5f006f 50%,#3E5D5A  50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.25s ease-out;
+}
+.location_address .location_info .btn:hover{
+    background-position: left bottom;
+    color: #fff;
+}
+/*Main > Food CSS*/
+.main_food{
+    scroll-margin-top: 60px;
+}
+/* Khung slider */
+.slider-wrapper {
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+/* Track chứa các slide */
+.food-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  width: 100%;
+}
+.main_food .main_title{
+    text-align: center;
+    font-size: 50px;
+}
+.main_food .main_item{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    flex-shrink: 0;
+    padding: 20px 50px;
+    min-width: 100%;
+    max-width: 100%;
+}
+.main_food .item_img{
+    overflow: hidden;
+    border-radius: 10px;
+    flex: 1;
+}
+.main_food .item_content{
+    flex: 1 ;
+}
+.main_food .item_content .content_header{
+    padding: 15px 0px;
+}
+.main_food .item_img img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Nút điều hướng slider */
+.slider-wrapper .prev,
+.slider-wrapper .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.slider-wrapper .prev {
+    left: 0px;
+}
+.slider-wrapper .next {
+    right: 0px;
+}
+.slider-wrapper .prev:hover,
+.slider-wrapper .next:hover {
+    background: #E30019;
+    color: #fff;
+}
+
+
+
+/*Main > Art CSS*/
+.main_art{
+    scroll-margin-top: 50px;
+}
+.main_art .main_title{
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 50px;
+}
+.main_art .art-content-box{
+    gap: 10px;
+    width: 1200px;
+    margin: 0px auto;
+}
+.main_art .main_item{
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    flex: 1;
+}
+.main_art .item_img {
+    border-radius: 10px;
+}
+.main_art .item_img img{
+    display: block;
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+.main_art .item_img img:hover{
+    transform: scale(1.1); 
+}
+.main_art .main_item .item_content{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+    color: #fff;  
+}
+.main_art .item_content .content_header{
+    display: inline-block;
+    padding: 10px 5px;
+    background: url(./img/art_title_background.png) 50% center / 50px;;
+}
+.main_art .item_content .content_text{
+    padding: 10px 5px;
+    background-color: rgba(0,0,0,0.75);
+}
+
+/*Main > Craft Village CSS*/
+.main_craftVillage{
+    text-align: center;
+    scroll-margin-top: 50px;
+}
+.main_craftVillage .main_title{
+    margin-bottom: 32px;
+    font-size: 50px;
+}
+.main_craftVillage .craft_village_content_box{
+    width: 1200px;
+    margin: 0px auto;
+    gap: 10px;
+}
+.main_craftVillage .main_item{
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 0 25px rgba(34,40,49,0.2), 0 0 80px rgba(34,40,49,0.3);
+    border: 2px solid rgba(34, 40, 49, 0.7);
+    animation: pulseBorder 2.2s infinite ease-in-out;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.main_craftVillage .item_img img{
+    width: 100%;
+    display: block;
+}
+.main_craftVillage .item_content{
+    padding: 30px 5px;
+    background: linear-gradient(to top, rgb(133 113 113 / 0.8), rgba(0, 0, 0, 0.2));
+    color: white;
+}
+.main_craftVillage .item_content .textbox_text{
+    padding: 20px;
+}
+.main_craftVillage .content_btn button{
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    background-color: #000;
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.4s ease;
+}
+
+.main_craftVillage .content_btn button:hover{
+    background-color: #fff;
+    color: #000;
+}
+@keyframes pulseBorder {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(34, 40, 49, 0.4), 0 0 25px rgba(34,40,49,0.2), 0 0 80px rgba(34,40,49,0.3);
+    border: 2px solid rgba(34, 40, 49, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(34, 40, 49, 0.7), 0 0 80px rgba(34,40,49,0.4);
+    border: 2px solid rgba(34, 40, 49, 1);
+  }
+}
+/*Footer CSS*/
+.footer{
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    background-color: #fff;
+}
+
