@@ -6,190 +6,173 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huế Festival</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <!-- Phan dau logo, menu -->
+        <!-- Background blur -->
         <div class="background-blur"></div>
-        <div class="header">
+
+        <!-- Header -->
+        <header class="header">
             <div class="header-content-box flex-container jc-between">
                 <div class="logoHue">
-                    <img src="./img/logo.jpg" alt="logo_1">
+                    <img src="./img/logoHue.png" alt="logo_1">
                 </div>
-                <div class="menu">
+                <div class="menu-container">
                     <ul id="nav">
-                        <li><a href="#introduce">Giới thiệu</a></li>
-                        <li>
+                        <li class="nav_li"><a href="#introduce">Giới thiệu</a></li>
+                        <li class="nav_li">
                             <span>Khám phá</span>
                             <ul class="subnav">
-                                <li><a href="#location">Lăng tẩm</a></li>
-                                <li><a href="#food">Ẩm thực</a></li>
-                                <li><a href="#art">Nghệ thuật</a></li>
-                                <li><a href="#village">Làng nghề</a></li>
+                                <li class="subnav_li"><a href="#location">Lăng tẩm</a></li>
+                                <li class="subnav_li"><a href="#food">Ẩm thực</a></li>
+                                <li class="subnav_li"><a href="#art">Nghệ thuật</a></li>
+                                <li class="subnav_li"><a href="#village">Làng nghề</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
                 <div class="logoTeam">
-                    <img src="./img/logo_2.jpg" alt="logo_2">
+                    <img src="./img/logoTeam.png" alt="TeamCodeX">
                 </div>
             </div>
-        </div>
+        </header>
 
-        <!-- Noi dung -->
-        <div class="main">
+        <!-- Main Content -->
+        <main class="main">
             <div class="main_video">
-                <video src="#" width="100%" autoplay loop playsinline>
-                </video>
+                <video src="./video/Hue.mp4" width="100%" autoplay loop playsinline muted controls></video>
             </div>
-            <div id="introduce" class="main_introduce mt-64">
+
+            <div id="introduce" class="main_introduce">
                 <h2 class="introduce_title title-font">Giới Thiệu</h2>
                 <p class="introduce_text mt-32">
-                    The NVIDIA RTX 50 series, powered by the cutting-edge **Blackwell architecture**, represents a
-                    significant leap forward in graphics processing. Unveiled at CES 2025, these GPUs are designed to
-                    redefine performance for gamers, creators, and AI professionals.
-
-                    A core innovation is the **Blackwell architecture** itself, featuring more efficient transistors,
-                    increased core counts, and a substantial boost in memory bandwidth thanks to the adoption of **GDDR7
-                    memory**. This allows the RTX 50 series to handle the most demanding tasks with unprecedented ease.
-                    For instance, the flagship RTX 5090 is reported to deliver up to 50% higher frame rates at 4K
-                    resolution compared to its predecessor.
-
-                    Beyond raw performance, the RTX 50 series places a heavy emphasis on **AI acceleration**. It
-                    introduces **DLSS 4.0**, with advanced features like Multi Frame Generation and transformer-based
-                    models, significantly improving framerates and image quality through AI-driven upscaling. New AI
-                    hardware is integrated to boost performance across various workloads, and an AI management processor
-                    (AMP) helps optimize task allocation.
-
-                    The lineup spans from the enthusiast-grade **RTX 5090** and **RTX 5080** (launched in January 2025)
-                    to the **RTX 5070 Ti**, **RTX 5070**, **RTX 5060 Ti**, and **RTX 5060** (rolling out through
-                    February to June 2025). Mobile variants are also available, bringing Blackwell's power to laptops.
-                    The RTX 50 series is poised to set new standards in gaming realism, content creation, and AI-driven
-                    applications.
+                    Huế – cố đô thơ mộng nằm bên dòng sông Hương hiền hòa – là một trong những trung tâm văn hóa, lịch
+                    sử và nghệ thuật lớn của Việt Nam. Trải qua hơn 700 năm hình thành và phát triển, đặc biệt là giai
+                    đoạn triều Nguyễn (1802–1945), Huế từng giữ vai trò là kinh đô của đất nước, nơi quy tụ tinh hoa văn
+                    hóa dân tộc, nghệ thuật cung đình và kiến trúc truyền thống. <br>
+                    Đến với Huế, du khách như bước vào một không gian cổ kính và tĩnh lặng, nơi di sản văn hóa vật thể
+                    hiện hữu qua hệ thống Hoàng thành, lăng tẩm vua chúa, chùa chiền cổ kính, cầu Trường Tiền bắc ngang
+                    sông Hương hay những làng nghề truyền thống mang đậm dấu ấn thời gian. Không dừng lại ở đó, Huế còn
+                    là nơi sản sinh và lưu giữ nhiều giá trị văn hóa phi vật thể vô cùng quý giá như Nhã nhạc cung đình
+                    Huế – được UNESCO công nhận là di sản văn hóa phi vật thể của nhân loại, ca Huế trên sông Hương, lễ
+                    hội dân gian và ẩm thực cung đình tinh tế, đặc sắc.<br>
+                    Huế không chỉ đẹp bởi kiến trúc và lịch sử, mà còn bởi tâm hồn người Huế – nhẹ nhàng, sâu lắng, đầy
+                    lòng hiếu khách. Từng món ăn, từng làn điệu, từng nụ cười thân thiện đều góp phần tạo nên một bản
+                    sắc rất riêng, rất Huế. Trong thời hiện đại, thành phố Huế vẫn giữ được nét truyền thống vốn có,
+                    đồng thời không ngừng phát triển để trở thành trung tâm văn hóa – du lịch đặc sắc của khu vực và cả
+                    nước.<br>
+                    Với vẻ đẹp trầm mặc, cổ điển hòa quyện cùng nhịp sống hiện đại, Huế xứng đáng là điểm đến không thể
+                    bỏ lỡ của bất kỳ ai yêu mến lịch sử, nghệ thuật và chiều sâu văn hóa Việt Nam.
                 </p>
             </div>
-            <div id="location" class="main_location mt-64">
+
+            <div id="location" class="main_location">
                 <h2 class="main_title title-font">Lăng Tẩm</h2>
                 <div class="location-content-box flex-container jc-between mt-32">
                     <div class="location_address">
                         <div class="location_img">
-                            <img src="./img/bienThuanAn_background.jpg" alt="">
+                            <img src="./img/langminhmang.png" alt="">
                         </div>
                         <div class="location_info">
-                            <h3 class="location_title">Phá Tam Giang</h3>
+                            <h3 class="location_title">Lăng Minh Mạng</h3>
                             <button class="btn">Xem Thêm</button>
                         </div>
                     </div>
-
                     <div class="location_address">
                         <div class="location_img">
-                            <img src="./img/thuanan_img.png" alt="">
+                            <img src="./img/langgialong.jpg" alt="">
                         </div>
                         <div class="location_info">
-                            <h3 class="location_title">Biển Thuận An</h3>
+                            <h3 class="location_title">Lăng Gia Long</h3>
                             <button class="btn"><span>Xem Thêm</span></button>
                         </div>
                     </div>
-
                     <div class="location_address">
                         <div class="location_img">
-                            <img src="./img/thien-mu-pagoda-thumb.jpg" alt="">
+                            <img src="./img/langkhaidinh.jpg" alt="">
                         </div>
                         <div class="location_info">
-                            <h3 class="location_title">Chùa Thiên Mụ</h3>
+                            <h3 class="location_title">Lăng Khải Định</h3>
                             <button class="btn"><span>Xem Thêm</span></button>
                         </div>
                     </div>
-
                     <div class="location_address">
                         <div class="location_img">
-                            <img src="./img/city_wallpaper_2.jpg" alt="">
+                            <img src="./img/langtuduc.jpg" alt="">
                         </div>
                         <div class="location_info">
-                            <h3 class="location_title">Amazon</h3>
+                            <h3 class="location_title">Lăng Tự Đức</h3>
                             <button class="btn"><span>Xem Thêm</span></button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="food" class="main_food mt-64">
+
+            <div id="food" class="main_food">
                 <h2 class="main_title title-font">Ẩm Thực</h2>
                 <div class="slider-wrapper mt-32">
                     <div class="food-track">
                         <div class="main_item">
                             <div class="item_img">
-                                <img src="./img/banh_nam.jpg" alt="">
+                                <img src="./img/bunboHue.jpg" alt="">
                             </div>
                             <div class="item_content">
-                                <h4 class="content_header">GeForce RTX 50 Series</h4>
-                                <p class="content_text">
-                                    Powered by NVIDIA Blackwell, GeForce
-                                    RTX™ 50 Series GPUs bring game-changing
-                                    capabilities to gamers and creators.
-                                    Equipped with a massive level of AI
-                                    horsepower, the RTX 50 Series enables
-                                    new experiences and next-level graphics
-                                    fidelity. Multiply performance with NVIDIA
-                                    DLSS 4, generate images at unprecedented
-                                    speed, and unleash your creativity with
-                                    NVIDIA Studio.
-                                    Gigabyte's GeForce RTX 5090 is
-                                    shaping up to be a performance
-                                    monster. With its Blackwell
-                                    architecture and immense VRAM,
-                                    it's expected to deliver smooth
-                                    8K gaming and superior AI processing
-                                    capabilities. Gigabyte's massive
-                                    WINDFORCE cooling system will be
-                                    crucial in managing the temperatures
-                                    of this powerful chip, ensuring stable
-                                    performance even under heavy loads. This
-                                    will undoubtedly be a top choice for
-                                    gamers and professionals demanding
-                                    absolute performance.
+                                <h2 class="content_header">Bún Bò Huế</h2>
+                                <p class="food_text">
+                                    Bún bò Huế là món ăn đặc trưng và tiêu biểu của ẩm thực Huế, nổi bật với hương vị
+                                    đậm đà, cay nồng, kết hợp giữa xương bò ninh kỹ, mắm ruốc Huế, sả và ớt sa tế tạo
+                                    nên nước dùng thơm ngon, khó lẫn.<br>
+                                    Mặc dù gọi là "bún bò", nhưng một tô bún đúng chất Huế còn có giò heo, chả lụa,
+                                    huyết luộc và rau sống ăn kèm như giá đỗ, rau quế, bắp chuối. Tất cả hòa quyện thành
+                                    một bản giao hưởng hương vị vừa dân dã vừa thanh tao.<br>
+                                    Quá trình chế biến bún bò Huế rất kỳ công: từ chọn bắp bò tươi, giò heo săn chắc,
+                                    đến ninh xương nhiều giờ với gia vị truyền thống. Mỗi tô bún là cả tình cảm, sự tinh
+                                    tế và văn hóa ẩm thực Huế được gửi gắm.<br>
+                                    Dù có nhiều biến tấu ở khắp vùng miền, nhưng hồn cốt của món ăn vẫn giữ nguyên: cay
+                                    nồng, đậm đà và giàu bản sắc Huế.
                                 </p>
                             </div>
                         </div>
                         <div class="main_item">
                             <div class="item_img">
-                                <img src="./img/laptop_30s.jpg" alt="">
+                                <img src="./img/cheHue.jpg" alt="">
                             </div>
                             <div class="item_content">
-                                <h4 class="content_header">GeForce RTX 30 Series Laptops</h4>
-                                <p class="content_text">
-                                    NVIDIA® GeForce RTX™ 30 Series Laptop
-                                    GPUs deliver high performance for
-                                    gamers and creators. They’re built
-                                    with Ampere—NVIDIA’s 2nd gen RTX
-                                    architecture—to give you the most
-                                    realistic ray-traced graphics and
-                                    cutting-edge AI features like NVIDIA
-                                    DLSS. Plus, Max-Q Technologies unleash
-                                    the power of AI to make thin high-performance
-                                    laptops.
+                                <h2 class="content_header">Chè Huế - Di sản ngọt ngào của đất Cố Đô</h2>
+                                <p class="food_text">
+                                    Chè Huế không chỉ là món ăn vặt quen thuộc, mà còn là biểu tượng văn hóa ẩm thực của
+                                    vùng đất cố đô. Xuất phát từ các món tráng miệng cung đình, chè Huế đã lan tỏa vào
+                                    đời sống dân gian, gắn liền với lễ nghi, sinh hoạt và tâm hồn người Huế.<br>
+                                    Chè Huế nổi bật bởi sự đa dạng và tinh tế: từ chè hạt sen, chè long nhãn thanh tao,
+                                    đến chè bột lọc heo quay độc đáo kết hợp vị mặn – ngọt; từ chè khoai tía, chè kê mộc
+                                    mạc, đến chè sương sa hạt lựu, chè chuối rực rỡ sắc màu. Mỗi loại chè là một tác
+                                    phẩm nghệ thuật, đòi hỏi sự khéo léo và cầu kỳ trong từng công đoạn.<br>
+                                    Chè Huế chính là vị ngọt của ký ức, là cách người Huế gửi gắm hồn quê và sự thanh
+                                    tao vào từng chén chè nhỏ – dịu dàng mà sâu sắc, như chính mảnh đất này.<br>
                                 </p>
                             </div>
                         </div>
                         <div class="main_item">
                             <div class="item_img">
-                                <img src="./img/rtx_40s.jpg" alt="">
+                                <img src="./img/bunhenHue.jpg" alt="">
                             </div>
                             <div class="item_content">
-                                <h4 class="content_header">GeForce RTX 40 Series</h4>
-                                <p class="content_text">
-                                    NVIDIA® GeForce RTX™ 40 Series GPUs
-                                    are beyond fast for gamers and creators.
-                                    They're powered by the ultra-efficient
-                                    NVIDIA Ada Lovelace architecture which
-                                    delivers a quantum leap in both performance
-                                    and AI-powered graphics. Experience lifelike
-                                    virtual worlds with ray tracing and ultra-high
-                                    FPS gaming with the lowest latency. Discover
-                                    revolutionary new ways to create and unprecedented
-                                    workflow acceleration.
+                                <h2 class="content_header">Bún Hến</h2>
+                                <p class="food_text">
+                                    Bún hến Huế là một món ăn đặc trưng nổi tiếng, có nguồn gốc từ làng Cồn Hến bên bờ
+                                    sông Hương. Từ nguyên liệu bình dị là hến, người Huế đã khéo léo sáng tạo nên một
+                                    món ăn mang hương vị thanh mát, cay nồng, đậm đà và không thể trộn lẫn.<br>
+                                    Một tô bún hến đầy đủ bao gồm bún sợi nhỏ, hến xào thơm, rau sống như rau răm, húng
+                                    lủi, ngổ, kèm theo tóp mỡ giòn, đậu phộng, mắm ruốc và ớt đỏ. Điểm đặc biệt là nước
+                                    hến thanh ngọt được múc riêng hoặc chan nhẹ, tạo nên sự hài hòa tuyệt vời giữa các
+                                    vị mặn, ngọt, cay và thanh.<br>
+                                    Không chỉ ngon, bún hến còn là một phần của văn hóa Huế, gắn liền với hình ảnh những
+                                    quán ăn dân dã, ấm cúng buổi sớm. Dù cuộc sống hiện đại đổi thay, món ăn này vẫn giữ
+                                    nguyên nét mộc mạc truyền thống và là dấu ấn khó phai trong lòng du khách.<br>
                                 </p>
                             </div>
                         </div>
@@ -202,7 +185,8 @@
                     </button>
                 </div>
             </div>
-            <div id="art" class="main_art mt-64">
+
+            <div id="art" class="main_art">
                 <h2 class="main_title title-font">Nghệ thuật</h2>
                 <div class="art-content-box flex-container">
                     <div class="main_item">
@@ -214,8 +198,7 @@
                         <div class="item_content">
                             <div class="content_textbox">
                                 <h3 class="content_header">Nhã Nhạc Cung Đình Huế</h3>
-                                <p class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Eos, est?
+                                <p class="content_text">Biểu tượng âm nhạc cung đinh Việt Nam</p>
                             </div>
                         </div>
                     </div>
@@ -227,30 +210,29 @@
                         </div>
                         <div class="item_content">
                             <h3 class="content_header">Tuồng Huế</h3>
-                            <p class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                                est?
+                            <p class="content_text">Hồn dân tộc vang mãi chốn cung son</p>
                         </div>
                     </div>
                     <div class="main_item">
                         <div class="item_img">
                             <a href="">
-                                <img src="./img/art_caHue.jpeg" alt="">
+                                <img src="./img/cahue2.jpg" alt="">
                             </a>
                         </div>
                         <div class="item_content">
                             <h3 class="content_header">Ca Huế</h3>
-                            <p class="content_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos,
-                                est?
+                            <p class="content_text">Bản tình ca xứ Huế ngàn đời lưu dấu</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="village" class="main_craftVillage mt-64">
+
+            <div id="village" class="main_craftVillage">
                 <h2 class="main_title title-font">Làng Nghề</h2>
                 <div class="craft_village_content_box flex-container">
                     <div class="main_item">
                         <div class="item_img">
-                            <img src="./img/artvillage_langHuongThuyXuan.jpg" alt="">
+                            <img src="./img/langhuong.jpg" alt="">
                         </div>
                         <div class="item_content">
                             <div class="content_textbox">
@@ -292,12 +274,43 @@
                     </div>
                 </div>
             </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footerLeft">
+                <h3 class="footer_title">Kết nối với chúng tôi</h3>
+                <ul class="connect">
+                    <li class="connect_item"><a href="#">Chính sách quyền riêng tư</a></li>
+                    <li class="connect_item"><a href="#">Liên hệ</a></li>
+                    <li class="connect_item"><a href="#">Hỏi đáp</a></li>
+                </ul>
+            </div>
+            <div class="footerMid">
+                <h3 class="footer_discover">Khám phá</h3>
+                <ul class="discoverList">
+                    <li class="discoverList_item"><a href="#">Lăng tẩm nổi tiếng</a></li>
+                    <li class="discoverList_item"><a href="#">Ẩm thực Huế</a></li>
+                    <li class="discoverList_item"><a href="#">Lễ hội truyền thống</a></li>
+                </ul>
+            </div>
+            <div class="footerRight">
+                <h3 class="footer_title">Bản đồ</h3>
+                <a href="https://www.google.com/maps/place/Hu%E1%BA%BF+City/@16.463713,107.590866,12z" target="_blank">
+                    <div class="map_wrapper">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d122439.4702223807!2d107.590866!3d16.463713!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31419c87726490f7%3A0xab1c0fcaf7cb84b5!2zVGjDoG5oIHBo4buRIEh14bq_!5e0!3m2!1svi!2s!4v1753106400751!5m2!1svi!2s"
+                            width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </a>
+            </div>
+        </footer>
+        <div class="copyright">
+            <p>© 2025 Team CodeX. All Rights Reserved.</p>
         </div>
     </div>
-    <div class="footer mt-64">
-        <h2>Footer</h2>
-    </div>
-    </div>
+
     <script src="./script.js"></script>
 </body>
 

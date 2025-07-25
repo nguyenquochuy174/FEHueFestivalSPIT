@@ -1,48 +1,56 @@
-/*Reset CSS*/
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-/*CSS Dung Chung*/
-html{
+
+html {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
-.mt-64{
+
+.mt-64 {
     margin-top: 64px !important;
 }
-.mt-32{
+
+.mt-32 {
     margin-top: 32px !important;
 }
-.flex-container{
+
+.flex-container {
     display: flex;
 }
-.jc-between{
+
+.jc-between {
     justify-content: space-between !important;
 }
-.jc-around{
+
+.jc-around {
     justify-content: space-around !important;
 }
-.title-font{
+
+.title-font {
     font-family: 'Dancing Script', cursive !important;
 }
-/*Grid CSS*/
+
 .container {
+    width: 100%;
     position: relative;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: minmax(60px,auto);
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    
+    grid-template-rows: minmax(60px, auto);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+        "copyright";
 }
-/*Lam mo background*/
+
 .background-blur {
     position: fixed;
-    top: 0px; left: 0; right: 0; bottom: 0;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url(./img/dai_noi_hue_02.jpg);
     background-size: cover;
     background-position: center;
@@ -50,7 +58,6 @@ html{
     z-index: -1;
 }
 
-/*Header CSS*/
 .header {
     background-color: rgba(255, 255, 255, 0.8);
     grid-area: header;
@@ -59,50 +66,69 @@ html{
     left: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
-.header .header-content-box{
-    width: 1200px;
+
+.header .header-content-box {
+    width: 100%;
+    max-width: 1200px;
     margin: 0px auto;
     display: flex;
     align-items: center;
+    padding: 0 15px;
 }
-.header .logoHue img,
-.header .logoTeam img{
+
+.header .logoTeam img {
+    display: block;
+    width: 70px;
+    height: 70px;
+}
+
+.header .logoHue img {
     display: block;
     width: 50px;
     height: 50px;
 }
-.header .menu #nav{
-    width: 300px;
+
+.header .menu-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header .menu #nav {
+    width: 100%;
     height: 100%;
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
 }
-#nav li{
+
+#nav .nav_li {
     display: inline-block;
     position: relative;
-    padding: 5px 0px;
+    padding: 5px 10px;
 }
-#nav > li > span,
-#nav > li > a{
+
+#nav>.nav_li>span,
+#nav>.nav_li>a {
     display: block;
     text-decoration: none;
     color: #000;
     line-height: 50px;
 }
-#nav > li:hover > span,
-#nav > li:hover > a {
+
+#nav>.nav_li:hover>span,
+#nav>.nav_li:hover>a {
     display: block;
     color: #E30019;
     cursor: pointer;
 }
-/*SubNav CSS*/
-#nav .subnav{
+
+#nav .subnav {
     position: absolute;
     display: none;
     top: 100%;
@@ -110,102 +136,126 @@ html{
     background-color: rgba(255, 255, 255, 0.8);
     width: 200px;
     z-index: 101;
-
-}
-#nav li:hover .subnav {
-    display: block;
     border: 0.3px solid #ccc;
-    animation: fadein ease-in 0.3s; /*chuyen dong subnav*/
+    border-radius: 5px;
 }
-#nav .subnav li{
+
+#nav .nav_li:hover .subnav {
+    display: block;
+    animation: fadein ease-in 0.3s;
+}
+
+#nav .subnav .subnav_li {
     list-style: none;
     display: block;
     padding: 8px 16px;
 }
-#nav .subnav a{
+
+#nav .subnav a {
     text-decoration: none;
     color: #000;
 }
-#nav .subnav li:hover{
+
+#nav .subnav .subnav_li:hover {
     background-color: #a09d9d;
     cursor: pointer;
-
 }
-@keyframes fadein{
-    from{
-        top:50%;
+
+@keyframes fadein {
+    from {
+        top: 50%;
         opacity: 0;
     }
-    to{
+
+    to {
         top: 100%;
         opacity: 1;
     }
 }
 
-/*Main CSS*/
-/*Main > Location CSS*/
 .main {
     grid-area: main;
     color: #000;
 }
-.main_video video{
+
+.main_video video {
     display: block;
     margin: 0px auto;
+    margin-top: 10px;
 }
-.main_introduce{
-    width: 1200px;
+
+.main_introduce {
+    width: 90%;
+    max-width: 1200px;
     margin: 0px auto;
-    scroll-margin-top: 50px;
+    scroll-margin-top: 70px;
 }
-.main_introduce .introduce_title{
+
+.main_introduce .introduce_title {
     text-align: center;
     font-size: 50px;
+    margin-top: 40px;
 }
-.main_introduce .introduce_text{
+
+.main_introduce .introduce_text {
     text-align: justify;
     font-size: 20px;
     font-weight: 700;
+    line-height: 1.4;
 }
-/*Main > Location CSS*/
-.main_location{
+
+.main_location {
     text-align: center;
     scroll-margin-top: 50px;
 }
-.main_location .main_title{
+
+.main_location .main_title {
     font-size: 50px;
+    margin-top: 40px;
 }
-.main_location .location-content-box{
-    width: 1200px;
+
+.main_location .location-content-box {
+    width: 90%;
+    max-width: 1200px;
     margin: 0px auto;
+    flex-wrap: wrap;
 }
-.location_address{
-    width: 24%;
+
+.location_address {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
     position: relative;
     cursor: pointer;
 }
 
-.location_address .location_img img{
+.location_address .location_img img {
     display: block;
     width: 100%;
     height: 300px;
+    object-fit: cover;
     border-radius: 10px;
     transition: filter 0.3s;
 }
-/* Overlay trắng mờ */
+
 .location_address .location_img::after {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255,255,255,0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s;
     z-index: 1;
 }
+
 .location_address:hover .location_img::after {
     opacity: 1;
 }
+
 .location_address .location_info {
     position: absolute;
     top: 50%;
@@ -219,15 +269,16 @@ html{
     width: 80%;
     color: #222;
 }
+
 .location_address:hover .location_info {
     opacity: 1;
 }
 
-.location_address .location_info .location_title{
+.location_address .location_info .location_title {
     padding: 10px 0px;
 }
-/*Chat gpt chi animation hover*/
-.location_address .location_info .btn{
+
+.location_address .location_info .btn {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 15px;
@@ -235,72 +286,90 @@ html{
     color: #fff;
     border: none;
     border-radius: 10px;
-    background: linear-gradient(to right,#5f006f 50%,#3E5D5A  50%);
+    background: linear-gradient(to right, #5f006f 50%, #3E5D5A 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 0.25s ease-out;
 }
-.location_address .location_info .btn:hover{
+
+.location_address .location_info .btn:hover {
     background-position: left bottom;
     color: #fff;
 }
-/*Main > Food CSS*/
-.main_food{
+
+
+.main_food {
     scroll-margin-top: 60px;
 }
-/* Khung slider */
+
+
 .slider-wrapper {
     position: relative;
-    width: 1200px;
+    width: 90%;
+    max-width: 1200px;
     overflow: hidden;
     margin: 0px auto;
     border-radius: 10px;
 }
-/* Track chứa các slide */
+
+
 .food-track {
-  display: flex;
-  transition: transform 0.4s ease;
-  width: 100%;
+    display: flex;
+    transition: transform 0.4s ease;
+    width: 100%;
 }
-.main_food .main_title{
+
+.main_food .main_title {
     text-align: center;
     font-size: 50px;
+    margin-top: 40px;
 }
-.main_food .main_item{
+
+.main_food .main_item {
     display: flex;
     width: 100%;
     gap: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     position: relative;
     flex-shrink: 0;
-    padding: 20px 50px;
+    padding: 25px 50px;
     min-width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
 }
-.main_food .item_img{
+
+.main_food .item_img {
     overflow: hidden;
     border-radius: 10px;
     flex: 1;
 }
-.main_food .item_content{
-    flex: 1 ;
-}
-.main_food .item_content .content_header{
-    padding: 15px 0px;
-}
-.main_food .item_img img{
-    display: block;
-    width: 100%;
-    height: auto;
+
+.main_food .item_content {
+    flex: 1;
 }
 
-/* Nút điều hướng slider */
+.main_food .item_content .content_header {
+    padding: 15px 0px;
+}
+
+.main_food .item_content .food_text {
+    line-height: 1.4;
+    font-size: 16px;
+}
+
+.main_food .item_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .slider-wrapper .prev,
 .slider-wrapper .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
     border-radius: 50%;
@@ -309,114 +378,145 @@ html{
     cursor: pointer;
     z-index: 2;
     transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
+
 .slider-wrapper .prev {
-    left: 0px;
+    left: 10px;
 }
+
 .slider-wrapper .next {
-    right: 0px;
+    right: 10px;
 }
+
 .slider-wrapper .prev:hover,
 .slider-wrapper .next:hover {
     background: #E30019;
     color: #fff;
 }
 
-
-
-/*Main > Art CSS*/
-.main_art{
+.main_art {
     scroll-margin-top: 50px;
 }
-.main_art .main_title{
+
+.main_art .main_title {
     text-align: center;
     margin-bottom: 32px;
+    margin-top: 40px;
     font-size: 50px;
 }
-.main_art .art-content-box{
-    gap: 10px;
-    width: 1200px;
+
+.main_art .art-content-box {
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0px auto;
+    flex-wrap: wrap;
 }
-.main_art .main_item{
+
+.main_art .main_item {
     overflow: hidden;
     border-radius: 10px;
     position: relative;
-    flex: 1;
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 280px;
+    margin-bottom: 20px;
 }
+
 .main_art .item_img {
     border-radius: 10px;
+    overflow: hidden;
 }
-.main_art .item_img img{
+
+.main_art .item_img img {
     display: block;
     width: 100%;
+    height: 300px;
+    object-fit: cover;
     transition: transform 0.4s ease;
 }
-.main_art .item_img img:hover{
-    transform: scale(1.1); 
+
+.main_art .item_img img:hover {
+    transform: scale(1.1);
 }
-.main_art .main_item .item_content{
+
+.main_art .main_item .item_content {
     position: absolute;
     left: 0;
     bottom: 0;
-    right: 0; 
-    color: #fff;  
-}
-.main_art .item_content .content_header{
-    display: inline-block;
-    padding: 10px 5px;
-    background: url(./img/art_title_background.png) 50% center / 50px;;
-}
-.main_art .item_content .content_text{
-    padding: 10px 5px;
-    background-color: rgba(0,0,0,0.75);
+    right: 0;
+    color: #fff;
 }
 
-/*Main > Craft Village CSS*/
-.main_craftVillage{
+.main_art .item_content .content_header {
+    display: inline-block;
+    padding: 10px 5px;
+    background: url(./img/art_title_background.png) 50% center / 50px;
+    ;
+}
+
+.main_art .item_content .content_text {
+    padding: 10px 5px;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Main > Craft Village CSS */
+.main_craftVillage {
     text-align: center;
     scroll-margin-top: 50px;
 }
-.main_craftVillage .main_title{
+
+.main_craftVillage .main_title {
     margin-bottom: 32px;
+    margin-top: 40px;
     font-size: 50px;
 }
-.main_craftVillage .craft_village_content_box{
-    width: 1200px;
+
+.main_craftVillage .craft_village_content_box {
+    width: 90%;
+    max-width: 1200px;
     margin: 0px auto;
-    gap: 10px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
-.main_craftVillage .main_item{
-    flex: 1;
+
+.main_craftVillage .main_item {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 280px;
+    margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 0 25px rgba(34,40,49,0.2), 0 0 80px rgba(34,40,49,0.3);
-    border: 2px solid rgba(34, 40, 49, 0.7);
+    box-shadow: 0 0 25px rgba(34, 40, 49, 0.2), 0 0 80px rgba(34, 40, 49, 0.3);
     animation: pulseBorder 2.2s infinite ease-in-out;
     position: relative;
     transition: all 0.4s ease;
 }
 
-.main_craftVillage .item_img img{
+.main_craftVillage .item_img img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
     display: block;
 }
-.main_craftVillage .item_content{
-    padding: 30px 5px;
+
+.main_craftVillage .item_content {
+    padding: 20px;
     background: linear-gradient(to top, rgb(133 113 113 / 0.8), rgba(0, 0, 0, 0.2));
     color: white;
 }
-.main_craftVillage .item_content .textbox_text{
-    padding: 20px;
+
+.main_craftVillage .item_content .textbox_text {
+    padding: 10px 0;
+    font-size: 14px;
 }
-.main_craftVillage .content_btn button{
-    padding: 10px 20px;
+
+.main_craftVillage .content_btn button {
+    padding: 8px 16px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     border: 1px solid #fff;
     background-color: #000;
@@ -425,25 +525,340 @@ html{
     transition: all 0.4s ease;
 }
 
-.main_craftVillage .content_btn button:hover{
+.main_craftVillage .content_btn button:hover {
     background-color: #fff;
     color: #000;
 }
+
 @keyframes pulseBorder {
-  0%, 100% {
-    box-shadow: 0 0 12px rgba(34, 40, 49, 0.4), 0 0 25px rgba(34,40,49,0.2), 0 0 80px rgba(34,40,49,0.3);
-    border: 2px solid rgba(34, 40, 49, 0.7);
-  }
-  50% {
-    box-shadow: 0 0 30px rgba(34, 40, 49, 0.7), 0 0 80px rgba(34,40,49,0.4);
-    border: 2px solid rgba(34, 40, 49, 1);
-  }
-}
-/*Footer CSS*/
-.footer{
-    height: 300px;
-    text-align: center;
-    line-height: 300px;
-    background-color: #fff;
+
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(34, 40, 49, 0.4), 0 0 25px rgba(34, 40, 49, 0.2), 0 0 80px rgba(34, 40, 49, 0.3);
+        border: 2px solid rgba(34, 40, 49, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(34, 40, 49, 0.7), 0 0 80px rgba(34, 40, 49, 0.4);
+        border: 2px solid rgba(34, 40, 49, 1);
+    }
 }
 
+.footer {
+    grid-area: footer;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footerLeft,
+.footerMid,
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.footer_title,
+.footer_discover {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.discoverList_item,
+.connect_item {
+    list-style: none;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.discoverList_item:hover a,
+.connect_item:hover a {
+    color: orangered;
+}
+
+.discoverList_item a,
+.connect_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.footerRight a {
+    padding-left: 20px;
+}
+
+.map_wrapper {
+    width: 300px;
+    max-height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgb(112, 112, 112);
+}
+
+.map_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.map_img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    grid-area: copyright;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid gray;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: #000000;
+}
+
+@media (max-width: 480px) {
+
+    .header .logoHue img,
+    .header .logoTeam img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header .menu #nav {
+        font-size: 14px;
+    }
+
+    .main_introduce .introduce_title {
+        font-size: 32px;
+    }
+
+    .main_introduce .introduce_text {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .main_location .main_title,
+    .main_art .main_title,
+    .main_craftVillage .main_title {
+        font-size: 32px;
+    }
+
+    .location_address {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .location_address .location_img img {
+        height: 200px;
+    }
+
+    .main_food .main_title {
+        font-size: 32px;
+    }
+
+    .main_food .main_item {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .main_food .item_img,
+    .main_food .item_content {
+        width: 100%;
+    }
+
+    .main_art .art-content-box,
+    .main_craftVillage .craft_village_content_box {
+        flex-direction: column;
+    }
+
+    .main_art .main_item,
+    .main_craftVillage .main_item {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerLeft,
+    .footerMid,
+    .footerRight {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .map_wrapper {
+        width: 90%;
+        max-width: 300px;
+        height: 150px;
+    }
+
+    .copyright p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .header .header-content-box {
+        padding: 10px;
+    }
+
+    .header .menu #nav {
+        font-size: 14px;
+    }
+
+    #nav .subnav {
+        width: 150px;
+    }
+
+    .main_introduce .introduce_title,
+    .main_location .main_title,
+    .main_food .main_title,
+    .main_art .main_title,
+    .main_craftVillage .main_title {
+        font-size: 40px;
+    }
+
+    .main_introduce .introduce_text {
+        font-size: 15px;
+    }
+
+    .location_address {
+        width: calc(50% - 10px);
+    }
+
+    .location_address .location_img img {
+        height: 250px;
+    }
+
+    .main_food .main_item {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main_food .item_img,
+    .main_food .item_content {
+        flex: none;
+        width: 100%;
+    }
+
+    .main_food .item_img img {
+        height: 250px;
+    }
+
+    .main_art .main_item {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 45%;
+    }
+
+    .main_art .item_img img {
+        height: 280px;
+    }
+
+    .main_craftVillage .main_item {
+        flex: 1 1 calc(50% - 10px);
+        min-width: 45%;
+    }
+
+    .main_craftVillage .item_img img {
+        height: 180px;
+    }
+
+    .footerLeft,
+    .footerMid,
+    .footerRight {
+        min-width: 45%;
+    }
+
+    .map_wrapper {
+        width: 100%;
+        max-height: 140px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header .menu #nav {
+        font-size: 15px;
+    }
+
+    #nav .subnav {
+        width: 180px;
+    }
+
+    .main_introduce .introduce_title,
+    .main_location .main_title,
+    .main_food .main_title,
+    .main_art .main_title,
+    .main_craftVillage .main_title {
+        font-size: 45px;
+    }
+
+    .location_address .location_img img {
+        height: 280px;
+    }
+
+    .main_food .main_item {
+        padding: 20px;
+    }
+
+    .main_food .item_img img {
+        height: 300px;
+    }
+
+    .main_art .main_item {
+        flex: 1 1 calc(33.333% - 15px);
+        min-width: 30%;
+    }
+
+    .main_craftVillage .main_item {
+        flex: 1 1 calc(33.333% - 15px);
+        min-width: 30%;
+    }
+
+    .footerLeft,
+    .footerMid,
+    .footerRight {
+        min-width: 30%;
+    }
+
+    .map_wrapper {
+        width: 250px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .header .menu #nav {
+        font-size: 16px;
+    }
+
+    .main_introduce .introduce_text {
+        font-size: 16px;
+    }
+
+    .location_address .location_img img {
+        height: 300px;
+    }
+
+    .main_food .main_item {
+        padding: 25px;
+    }
+
+    .main_art .main_item {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+
+    .main_craftVillage .main_item {
+        flex: 1 1 calc(33.333% - 20px);
+    }
+}
