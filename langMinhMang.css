@@ -1,0 +1,470 @@
+body {
+    /* font-family: "Segoe UI", sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333; */
+    line-height: 1.6;
+}
+
+h2 {
+    color: #415a77;
+}
+
+/* img {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    } */
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CSS Dung Chung*/
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/*Lam mo background*/
+.background-blur {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/langMinhMang_background.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/*Header CSS*/
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 5px 0px;
+}
+
+header .header-content-box {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+header .logoHue img,
+header .logoTeam img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+header .menu a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    line-height: 50px;
+}
+
+header .menu:hover a {
+    display: block;
+    color: #E30019;
+    cursor: pointer;
+}
+
+/*CSS Noi dung*/
+.container {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .title {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.container .title .title-header {
+    font-size: 30px;
+}
+
+.container h1,
+h2 {
+    text-align: center;
+}
+
+/*Tieu de CSS*/
+.title .title-description {
+    font-size: 20px;
+}
+
+/*Anh hover flex grow CSS*/
+/* .img-introduce {
+    margin-top: 30px;
+    display: flex;
+    width: 600px;
+    height: 200px;
+    gap: 10px;
+    border-radius: 10px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-item {
+    flex-grow: 1;
+    background-color: #ccc;
+    transition: flex-grow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img-item:hover {
+    flex-grow: 4;
+    background-color: #555;
+} */
+.img-introduce {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    height: 500px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.item {
+    flex: 1;
+    transition: flex 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.item img {
+    display: block;
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+    transform: translateX(-10%);
+}
+
+.item:hover {
+    flex: 5;
+}
+
+.item:hover img {
+    width: 100%;
+    height: 100%;
+    transform: translateX(0%);
+}
+
+/*Gioi thieu CSS*/
+.introduction {
+    margin-top: 70px;
+    background: #f5f7fa;
+    padding: 25px 20px;
+    border-radius: 10px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduction .introduction-content {
+    padding: 30px 20px;
+    gap: 15px;
+    flex-direction: row-reverse;
+}
+
+.introduction .introduction-content .content-text {
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.introduction .introduction-content .content-img {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.introduction .content-img img {
+    display: block;
+    width: 100%;
+}
+
+/*Vi tri CSS*/
+.location {
+    margin-top: 30px;
+    background: #f5f7fa;
+    padding: 25px 20px;
+    border-radius: 10px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location .location-content {
+    gap: 15px;
+}
+
+.location .location-content .content-text {
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.location .location-content .map-link {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* History Section */
+.history {
+    margin-top: 30px;
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.history-list {
+    list-style: disc inside;
+    font-size: 20px;
+    color: #333;
+}
+
+.history-list li {
+    margin-bottom: 10px;
+}
+
+/* Architecture Section */
+.architecture {
+    margin-top: 30px;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.architecture-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.architecture-content {
+    gap: 15px;
+}
+
+.architecture-content .content-list {
+    flex: 1;
+    list-style: square inside;
+    font-size: 20px;
+    color: #333;
+}
+
+.architecture-content .content-img {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.architecture-content .content-img img {
+    display: block;
+    width: 100%;
+}
+
+
+/* Highlights Section */
+.highlights {
+    margin-top: 30px;
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlights-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.highlights-content {
+    gap: 15px;
+}
+
+.highlights-content .content-list {
+    flex: 1;
+    list-style: circle inside;
+    font-size: 20px;
+    color: #333;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlights-content .content-img {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.highlights-content .content-img img {
+    display: block;
+    width: 100%;
+}
+
+.highlights-content .content-list strong {
+    color: #415a77;
+}
+
+/* Meaning and Value Section */
+.meaning-and-value {
+    margin-top: 30px;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.meaning-and-value-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.meaning-and-value .meaning-and-value-text {
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+/* Footer CSS */
+.footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.footerLeft,
+.footerMid,
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.footer_title,
+.footer_discover {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.discoverList_item,
+.connect_item {
+    list-style: none;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.discoverList_item:hover a,
+.connect_item:hover a {
+    color: orangered;
+}
+
+.discoverList_item a,
+.connect_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.footerRight a {
+    padding-left: 20px;
+}
+
+.map_wrapper {
+    width: 100%;
+    max-height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgb(112, 112, 112);
+}
+
+.map_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.map_img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    grid-area: copyright;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid gray;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: #000000;
+}

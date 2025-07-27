@@ -507,8 +507,15 @@ html {
     background: linear-gradient(to top, rgb(133 113 113 / 0.8), rgba(0, 0, 0, 0.2));
     color: white;
 }
-
+.main_craftVillage .item_content .textbox_header{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .main_craftVillage .item_content .textbox_text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 10px 0;
     font-size: 14px;
 }
