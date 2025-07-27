@@ -1,0 +1,282 @@
+body {
+    /* font-family: "Segoe UI", sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333; */
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h2 {
+    color: #415a77;
+}
+
+/* img {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    } */
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CSS Dung Chung*/
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.block-container {
+    display: block !important;
+}
+.mt-32{
+    margin-top: 32px;
+}
+.g-20{
+    gap: 30px;
+}
+.b-solid{
+    border: solid 1px #000;
+}
+
+/*Lam mo background*/
+.background-blur {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/Ca_Huế_background_1.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/*Header CSS*/
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 5px 0px;
+}
+
+header .header-content-box {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+header .logoHue img,
+header .logoTeam img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+header .menu a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    line-height: 50px;
+}
+
+header .menu:hover a {
+    display: block;
+    color: #E30019;
+    cursor: pointer;
+}
+
+/*CSS Noi dung*/
+.container {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .title {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.container .title .title-header {
+    font-size: 30px;
+}
+
+.container h1,
+h2 {
+    text-align: center;
+}
+
+/*Tieu de CSS*/
+.title .title-description {
+    font-size: 20px;
+}
+
+/*Slider lien tuc muot ma CSS*/
+.slider-wrapper {
+    margin-top: 30px;
+    overflow-x: hidden;
+    width: 1400px;
+    margin-inline: auto;
+    border-radius: 10px;
+}
+
+.slider-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.slider-track img {
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/*Noi dung chi tiet CSS*/
+.culture-info {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+}
+
+.info-box {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 100px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.info-box .box-content{
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+}
+.info-box .box-img{
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1;
+
+}
+.info-box .box-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+/* Footer CSS */
+.footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.footerLeft,
+.footerMid,
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.footer_title,
+.footer_discover {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.discoverList_item,
+.connect_item {
+    list-style: none;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.discoverList_item:hover a,
+.connect_item:hover a {
+    color: orangered;
+}
+
+.discoverList_item a,
+.connect_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.footerRight a {
+    padding-left: 20px;
+}
+
+.map_wrapper {
+    width: 100%;
+    max-height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgb(112, 112, 112);
+}
+
+.map_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.map_img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    grid-area: copyright;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid gray;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: #000000;
+}

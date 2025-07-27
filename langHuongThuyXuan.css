@@ -1,0 +1,369 @@
+body {
+    /* font-family: "Segoe UI", sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333; */
+    line-height: 1.6;
+}
+
+h2 {
+    color: #415a77;
+}
+
+/* img {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    } */
+
+/*Reset CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CSS Dung Chung*/
+html {
+    scroll-behavior: smooth;
+    font-family: Helvetica, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.block-container {
+    display: block !important;
+}
+
+/*Lam mo background*/
+.background-blur {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./img/langMinhMang_background.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/*Header CSS*/
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 5px 0px;
+}
+
+header .header-content-box {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+header .logoHue img,
+header .logoTeam img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+header .menu a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    line-height: 50px;
+}
+
+header .menu:hover a {
+    display: block;
+    color: #E30019;
+    cursor: pointer;
+}
+
+/*CSS Noi dung*/
+.container {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .title {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.container .title .title-header {
+    font-size: 30px;
+}
+
+.container h1,
+h2 {
+    text-align: center;
+}
+
+/*Tieu de CSS*/
+.title .title-description {
+    font-size: 20px;
+}
+
+/**/
+/*CSS SLider*/
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Khoảng cách giữa nút và slider */
+    position: relative;
+}
+
+.swiper {
+    width: 1200px;
+    height: 550px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+
+.swiper-wrapper {
+    overflow: unset;
+}
+
+.swiper-slide {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    color: #fff;
+    /* đổi màu mũi tên */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* thêm nền */
+    border-radius: 50%;
+    /* làm tròn nút */
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* hover đổi nền */
+}
+
+/*CSS: bỏ icon mặc định của Swiper*/
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+
+.swiper-button-next {
+    top: 50%;
+    right: 5%;
+    /* cách lề phải */
+}
+
+.swiper-button-prev {
+    top: 50%;
+    left: 5%;
+    /* cách lề trái */
+}
+
+/*Nguon goc CSS*/
+.source .source-header {}
+
+.source .source-content {
+    padding-top: 30px;
+    gap: 20px;
+}
+
+.source .source-content .content-text {
+    font-size: 20px;
+    flex: 1;
+    text-align: justify;
+}
+
+.source .source-content .content-img {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.source .content-img img {
+    display: block;
+    width: 100%;
+}
+
+/*Nghe thuat lam huong CSS*/
+.art-of-making .art-of-making-content {
+    padding-top: 30px;
+    gap: 20px;
+}
+
+.art-of-making .art-of-making-content .content-text {
+    font-size: 20px;
+    flex: 1;
+    text-align: justify;
+}
+
+.art-of-making .art-of-making-content .content-img {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.art-of-making .content-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/*San pham CSS*/
+.production .production-content {
+    padding-top: 30px;
+    gap: 20px;
+}
+
+.production .production-content .content-text {
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.production .production-content .content-img {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.production .content-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/*Du lich CSS*/
+.travel .travel-content{
+    padding-top: 30px;
+    gap: 20px;
+}
+.travel .travel-content .content-text{
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+}
+.travel .travel-content .content-img{
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 440px;
+}
+.travel .content-img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer CSS */
+.footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.footerLeft,
+.footerMid,
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.footer_title,
+.footer_discover {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.discoverList_item,
+.connect_item {
+    list-style: none;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.discoverList_item:hover a,
+.connect_item:hover a {
+    color: orangered;
+}
+
+.discoverList_item a,
+.connect_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.footerRight a {
+    padding-left: 20px;
+}
+
+.map_wrapper {
+    width: 100%;
+    max-height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgb(112, 112, 112);
+}
+
+.map_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.map_img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    grid-area: copyright;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid gray;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: #000000;
+}
