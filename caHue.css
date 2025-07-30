@@ -1,9 +1,4 @@
 body {
-    /* font-family: "Segoe UI", sans-serif;
-    background: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333; */
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -12,16 +7,6 @@ h2 {
     color: #415a77;
 }
 
-/* img {
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    } */
-
-/*Reset CSS*/
 * {
     margin: 0;
     padding: 0;
@@ -51,7 +36,6 @@ html {
     border: solid 1px #000;
 }
 
-/*Lam mo background*/
 .background-blur {
     position: fixed;
     top: 0px;
@@ -65,7 +49,6 @@ html {
     z-index: -1;
 }
 
-/*Header CSS*/
 header {
     background-color: rgba(255, 255, 255, 0.8);
     grid-area: header;
@@ -108,7 +91,6 @@ header .menu:hover a {
     cursor: pointer;
 }
 
-/*CSS Noi dung*/
 .container {
     margin-top: 60px;
     margin-left: auto;
@@ -129,12 +111,12 @@ h2 {
     text-align: center;
 }
 
-/*Tieu de CSS*/
+
 .title .title-description {
     font-size: 20px;
 }
 
-/*Slider lien tuc muot ma CSS*/
+
 .slider-wrapper {
     margin-top: 30px;
     overflow-x: hidden;
@@ -167,7 +149,6 @@ h2 {
     }
 }
 
-/*Noi dung chi tiet CSS*/
 .culture-info {
     max-width: 1200px;
     margin: 100px auto;
@@ -279,4 +260,236 @@ h2 {
     font-size: 16px;
     padding: 10px;
     color: #000000;
+}
+
+
+
+@media (max-width: 1200px) {
+    header .header-content-box {
+        width: 95%;
+    }
+    
+    .slider-wrapper {
+        width: 95%;
+    }
+    
+    .culture-info {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container .title .title-header {
+        font-size: 26px;
+    }
+    
+    .title .title-description {
+        font-size: 18px;
+    }
+    
+    .slider-wrapper {
+        width: 90%;
+    }
+    
+    .slider-track img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .info-box {
+        padding: 20px;
+    }
+    
+    .info-box .box-content {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .header-content-box {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 5px 0;
+    }
+    
+    header .logoHue img,
+    header .logoTeam img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    header .menu a {
+        font-size: 18px;
+        line-height: 40px;
+    }
+    
+    .container {
+        margin-top: 50px;
+    }
+    
+    .container .title .title-header {
+        font-size: 24px;
+    }
+    
+    .title .title-description {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    
+    .slider-wrapper {
+        width: 95%;
+        margin-top: 20px;
+    }
+    
+    .slider-track img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .culture-info {
+        margin: 50px auto;
+        padding: 0 15px;
+    }
+       .flex-container {
+        flex-direction: column;
+    }
+    
+    
+    .info-box {
+        padding: 15px;
+        margin-bottom: 50px;
+    }
+    
+    .info-box h2 {
+        font-size: 22px;
+    }
+    
+    .info-box .box-content {
+        font-size: 16px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .footerLeft,
+    .footerMid,
+    .footerRight {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .map_wrapper {
+        max-height: 200px;
+    }
+    
+    .footerRight iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    header .header-content-box {
+        flex-direction: row;
+        gap: 120px;
+    }
+    
+    .container .title .title-header {
+        font-size: 22px;
+    }
+    
+    .title .title-description {
+        font-size: 15px;
+    }
+    
+    .slider-wrapper {
+        width: 95%;
+    }
+    
+    .slider-track img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .info-box h2 {
+        font-size: 20px;
+    }
+    
+    .info-box .box-content {
+        font-size: 15px;
+    }
+    
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .box-img {
+        order: -1;
+        margin-bottom: 15px;
+    }
+    
+    .footer_title,
+    .footer_discover {
+        font-size: 18px;
+    }
+    
+    .discoverList_item,
+    .connect_item {
+        font-size: 15px;
+        margin-left: 0;
+    }
+    
+    .map_wrapper {
+        max-height: 150px;
+    }
+    
+    .footerRight iframe {
+        height: 150px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header .logoHue img,
+    .header .logoTeam img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header .menu #nav {
+        font-size: 14px;
+    }
+    .slider-track img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .info-box {
+        padding: 10px;
+    }
+    
+    .info-box h2 {
+        font-size: 18px;
+    }
+    
+    .info-box .box-content {
+        font-size: 14px;
+    }
+    
+    .footer_title,
+    .footer_discover {
+        font-size: 16px;
+    }
+    
+    .discoverList_item,
+    .connect_item {
+        font-size: 14px;
+    }
+    
+    .copyright p {
+        font-size: 14px;
+    }
 }
