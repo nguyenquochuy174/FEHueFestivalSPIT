@@ -1,0 +1,938 @@
+body {
+
+    line-height: 1.6;
+}
+
+h2 {
+    color: #415a77;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.background-blur {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    grid-area: header;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 5px 0px;
+}
+
+header .header-content-box {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+header .logoHue img,
+header .logoTeam img {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+
+header .menu a {
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    line-height: 50px;
+}
+
+header .menu:hover a {
+    display: block;
+    color: #E30019;
+    cursor: pointer;
+}
+
+
+.container {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container .title {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.container .title .title-header {
+    font-size: 30px;
+}
+
+.container h1,
+h2 {
+    text-align: center;
+}
+
+
+.title .title-description {
+    font-size: 20px;
+}
+
+
+.img-introduce {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    height: 500px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.item {
+    flex: 1;
+    transition: flex 0.5s ease;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.item img {
+    display: block;
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s ease;
+    transform: translateX(-10%);
+}
+
+.item:hover {
+    flex: 5;
+}
+
+.item:hover img {
+    width: 100%;
+    height: 100%;
+    transform: translateX(0%);
+}
+
+
+.introduction {
+    margin-top: 70px;
+    background: #f5f7fa;
+    padding: 25px 20px;
+    border-radius: 10px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.introduction .introduction-content {
+    padding: 30px 20px;
+    gap: 15px;
+    flex-direction: row-reverse;
+}
+
+.introduction .introduction-content .content-text {
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.introduction .introduction-content .content-img {
+    flex: 1;
+    overflow: hidden;
+}
+
+.introduction .content-img img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+
+.location {
+    margin-top: 30px;
+    background: #f5f7fa;
+    padding: 25px 20px;
+    border-radius: 10px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.location .location-content {
+    gap: 15px;
+}
+
+.location .location-content .content-text {
+    flex: 1;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.location .location-content .map-link {
+    flex: 1;
+    overflow: hidden;
+}
+
+
+.history {
+    margin-top: 30px;
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.history-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.history-list {
+    list-style: disc inside;
+    font-size: 20px;
+    color: #333;
+}
+
+.history-list li {
+    margin-bottom: 10px;
+}
+
+
+.architecture {
+    margin-top: 30px;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.architecture-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.architecture-content {
+    gap: 15px;
+}
+
+.architecture-content .content-list {
+    flex: 1;
+    list-style: square inside;
+    font-size: 20px;
+    color: #333;
+}
+
+.architecture-content .content-img {
+    flex: 1;
+    overflow: hidden;
+}
+
+.architecture-content .content-img img {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+
+.highlights {
+    margin-top: 30px;
+    background: #f5f7fa;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlights-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.highlights-content {
+    gap: 15px;
+}
+
+.highlights-content .content-list {
+    flex: 1;
+    list-style: circle inside;
+    font-size: 20px;
+    color: #333;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlights-content .content-img {
+    flex: 1;
+    overflow: hidden;
+}
+
+.highlights-content .content-img img {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.highlights-content .content-list strong {
+    color: #415a77;
+}
+
+
+.meaning-and-value {
+    margin-top: 30px;
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 25px 20px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.meaning-and-value-header {
+    color: #274472;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.meaning-and-value .meaning-and-value-text {
+    font-size: 20px;
+    color: #333;
+    text-align: justify;
+}
+
+
+.footer {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.footerLeft,
+.footerMid,
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 250px;
+}
+
+.footer_title,
+.footer_discover {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.discoverList_item,
+.connect_item {
+    list-style: none;
+    line-height: 1.8;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.discoverList_item:hover a,
+.connect_item:hover a {
+    color: orangered;
+}
+
+.discoverList_item a,
+.connect_item a {
+    text-decoration: none;
+    color: black;
+}
+
+.footerRight a {
+    padding-left: 20px;
+}
+
+.map_wrapper {
+    width: 100%;
+    max-height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid rgb(112, 112, 112);
+}
+
+.map_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.map_img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    grid-area: copyright;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid gray;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    color: #000000;
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+    header .header-content-box {
+        justify-content: space-between;
+        padding: 3px 8px;
+        width: 100%;
+    }
+    
+    header .logoHue img,
+    header .logoTeam img {
+        width: 28px;
+        height: 28px;
+    }
+    
+    header .menu a {
+        font-size: 13px;
+        line-height: 28px;
+        padding: 0 6px;
+    }
+    
+    .container {
+        margin-top: 34px;
+    }
+    
+    .container .title .title-header {
+        font-size: 20px;
+    }
+    
+    .title .title-description {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+
+    .img-introduce {
+        height: 250px;
+        margin: 15px auto;
+    }
+    
+
+    .introduction,
+    .location,
+    .history,
+    .architecture,
+    .highlights,
+    .meaning-and-value {
+        width: 95%;
+        padding: 15px;
+        margin: 15px auto;
+    }
+    
+    .introduction .introduction-content,
+    .location .location-content,
+    .architecture .architecture-content,
+    .highlights .highlights-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .introduction .introduction-content .content-text,
+    .location .location-content .content-text,
+    .architecture .architecture-content .content-list,
+    .highlights .highlights-content .content-list,
+    .meaning-and-value .meaning-and-value-text {
+        font-size: 14px;
+    }
+    
+    .introduction .introduction-content .content-img,
+    .location .location-content .map-link,
+    .architecture .architecture-content .content-img,
+    .highlights .highlights-content .content-img {
+        order: -1;
+        height: 200px;
+    }
+    
+    .location .location-content .map-link iframe {
+        height: 200px;
+    }
+    
+    .history-list,
+    .architecture-content .content-list,
+    .highlights-content .content-list {
+        font-size: 14px;
+        padding-left: 15px;
+    }
+    
+    .history-list li,
+    .architecture-content .content-list li,
+    .highlights-content .content-list li {
+        margin-bottom: 8px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+    
+
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .footer_title,
+    .footer_discover {
+        font-size: 16px;
+    }
+    .footerLeft,
+    .footerMid,
+    .footerRight {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .discoverList_item,
+    .connect_item {
+        font-size: 14px;
+        margin-left: 0;
+    }
+    
+    .map_wrapper {
+        max-height: 120px;
+    }
+    
+    .footerRight iframe {
+        height: 120px;
+    }
+    
+    .copyright p {
+        font-size: 13px;
+    }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    header .header-content-box {
+        justify-content: space-between;
+        padding: 4px 12px;
+        width: 100%;
+    }
+    
+    header .logoHue img,
+    header .logoTeam img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    header .menu a {
+        font-size: 15px;
+        line-height: 32px;
+        padding: 0 8px;
+    }
+    
+    .container {
+        margin-top: 40px;
+    }
+    
+    .container .title .title-header {
+        font-size: 22px;
+    }
+    
+    .title .title-description {
+        font-size: 15px;
+        padding: 0 12px;
+    }
+    
+    .img-introduce {
+        height: 350px;
+        margin: 20px auto;
+    }
+    
+
+    .introduction,
+    .location,
+    .history,
+    .architecture,
+    .highlights,
+    .meaning-and-value {
+        width: 90%;
+        padding: 20px;
+        margin: 20px auto;
+    }
+    
+    .introduction .introduction-content,
+    .location .location-content,
+    .architecture .architecture-content,
+    .highlights .highlights-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .introduction .introduction-content .content-text,
+    .location .location-content .content-text,
+    .architecture .architecture-content .content-list,
+    .highlights .highlights-content .content-list,
+    .meaning-and-value .meaning-and-value-text {
+        font-size: 16px;
+    }
+    
+    .introduction .introduction-content .content-img,
+    .location .location-content .map-link,
+    .architecture .architecture-content .content-img,
+    .highlights .highlights-content .content-img {
+        order: -1;
+        height: 250px;
+    }
+    
+    .location .location-content .map-link iframe {
+        height: 250px;
+    }
+    
+    .history-list,
+    .architecture-content .content-list,
+    .highlights-content .content-list {
+        font-size: 16px;
+        padding-left: 20px;
+    }
+    
+    .history-list li,
+    .architecture-content .content-list li,
+    .highlights-content .content-list li {
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .footer_title,
+    .footer_discover {
+        font-size: 18px;
+    }
+    .footerLeft,
+    .footerMid,
+    .footerRight {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .discoverList_item,
+    .connect_item {
+        font-size: 15px;
+        margin-left: 0;
+    }
+    
+    .map_wrapper {
+        max-height: 150px;
+    }
+    
+    .footerRight iframe {
+        height: 150px;
+    }
+    
+    .copyright p {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    header .header-content-box {
+        justify-content: space-between;
+        padding: 5px 15px;
+        width: 95%;
+    }
+    
+    header .logoHue img,
+    header .logoTeam img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    header .menu a {
+        font-size: 18px;
+        line-height: 40px;
+        padding: 0 10px;
+    }
+    
+    .container {
+        margin-top: 50px;
+    }
+    
+    .container .title .title-header {
+        font-size: 26px;
+    }
+    
+    .title .title-description {
+        font-size: 18px;
+        padding: 0 15px;
+    }
+    
+
+    .img-introduce {
+        height: 400px;
+        margin: 25px auto;
+    }
+    
+  
+    .introduction,
+    .location,
+    .history,
+    .architecture,
+    .highlights,
+    .meaning-and-value {
+        width: 95%;
+        padding: 20px;
+        margin: 25px auto;
+    }
+    
+    .introduction .introduction-content,
+    .location .location-content,
+    .architecture .architecture-content,
+    .highlights .highlights-content {
+        gap: 20px;
+    }
+    
+    .introduction .introduction-content .content-text,
+    .location .location-content .content-text,
+    .architecture .architecture-content .content-list,
+    .highlights .highlights-content .content-list,
+    .meaning-and-value .meaning-and-value-text {
+        font-size: 18px;
+    }
+    
+    .introduction .introduction-content .content-img,
+    .location .location-content .map-link,
+    .architecture .architecture-content .content-img,
+    .highlights .highlights-content .content-img {
+        height: 300px;
+    }
+    
+    .location .location-content .map-link iframe {
+        height: 300px;
+    }
+    
+    .history-list,
+    .architecture-content .content-list,
+    .highlights-content .content-list {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+    
+    .history-list li,
+    .architecture-content .content-list li,
+    .highlights-content .content-list li {
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+    
+
+    .footer {
+        gap: 25px;
+        padding: 20px;
+    }
+    
+    .footer_title,
+    .footer_discover {
+        font-size: 19px;
+    }
+    
+    .discoverList_item,
+    .connect_item {
+        font-size: 16px;
+    }
+    
+    .map_wrapper {
+        max-height: 180px;
+    }
+    
+    .footerRight iframe {
+        height: 180px;
+    }
+    
+    .copyright p {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    header .header-content-box {
+        justify-content: space-between;
+        padding: 5px 20px;
+        width: 95%;
+    }
+    
+    header .logoHue img,
+    header .logoTeam img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    header .menu a {
+        font-size: 19px;
+        line-height: 45px;
+        padding: 0 12px;
+    }
+    
+    .container {
+        margin-top: 55px;
+    }
+    
+    .container .title .title-header {
+        font-size: 28px;
+    }
+    
+    .title .title-description {
+        font-size: 19px;
+        padding: 0 20px;
+    }
+    
+    .img-introduce {
+        height: 450px;
+        margin: 30px auto;
+    }
+    
+    .introduction,
+    .location,
+    .history,
+    .architecture,
+    .highlights,
+    .meaning-and-value {
+        width: 95%;
+        padding: 25px;
+        margin: 30px auto;
+    }
+    
+    .introduction .introduction-content,
+    .location .location-content,
+    .architecture .architecture-content,
+    .highlights .highlights-content {
+        gap: 20px;
+    }
+    
+    .introduction .introduction-content .content-text,
+    .location .location-content .content-text,
+    .architecture .architecture-content .content-list,
+    .highlights .highlights-content .content-list,
+    .meaning-and-value .meaning-and-value-text {
+        font-size: 19px;
+    }
+    
+    .introduction .introduction-content .content-img,
+    .location .location-content .map-link,
+    .architecture .architecture-content .content-img,
+    .highlights .highlights-content .content-img {
+        height: 350px;
+    }
+    
+    .location .location-content .map-link iframe {
+        height: 350px;
+    }
+    
+    .history-list,
+    .architecture-content .content-list,
+    .highlights-content .content-list {
+        font-size: 19px;
+        padding-left: 20px;
+    }
+    
+    .history-list li,
+    .architecture-content .content-list li,
+    .highlights-content .content-list li {
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .footer {
+        gap: 30px;
+        padding: 25px;
+    }
+    
+    .footer_title,
+    .footer_discover {
+        font-size: 20px;
+    }
+    
+    .discoverList_item,
+    .connect_item {
+        font-size: 17px;
+    }
+    
+    .map_wrapper {
+        max-height: 200px;
+    }
+    
+    .footerRight iframe {
+        height: 200px;
+    }
+    
+    .copyright p {
+        font-size: 16px;
+    }
+}
