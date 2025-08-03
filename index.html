@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huế Festival</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
     <div class="container">
-        <!-- Background blur -->
-        <div class="background-blur"></div>
+        <div class="background-blur" style="background-image: url(./img/dai_noi_hue_02.jpg);"></div>
 
-        <!-- Header -->
+
         <header class="header">
             <div class="header-content-box flex-container jc-between">
                 <div class="logoHue">
@@ -40,7 +39,6 @@
             </div>
         </header>
 
-        <!-- Main Content -->
         <main class="main">
             <div class="main_video">
                 <video src="./video/Hue.mp4" width="100%" autoplay loop playsinline muted controls></video>
@@ -78,7 +76,7 @@
                         </div>
                         <div class="location_info">
                             <h3 class="location_title">Lăng Minh Mạng</h3>
-                            <button class="btn">Xem Thêm</button>
+                            <button class="btn" type="button" onclick="window.location.href='langMinhMang.html'">Xem Thêm</button>
                         </div>
                     </div>
                     <div class="location_address">
@@ -87,7 +85,7 @@
                         </div>
                         <div class="location_info">
                             <h3 class="location_title">Lăng Gia Long</h3>
-                            <button class="btn"><span>Xem Thêm</span></button>
+                            <button class="btn" type="button" onclick="window.location.href='langGiaLong.html'"><span>Xem Thêm</span></button>
                         </div>
                     </div>
                     <div class="location_address">
@@ -96,7 +94,7 @@
                         </div>
                         <div class="location_info">
                             <h3 class="location_title">Lăng Khải Định</h3>
-                            <button class="btn"><span>Xem Thêm</span></button>
+                            <button class="btn" type="button" onclick="window.location.href='langKhaiDinh.html'"><span>Xem Thêm</span></button>
                         </div>
                     </div>
                     <div class="location_address">
@@ -105,7 +103,7 @@
                         </div>
                         <div class="location_info">
                             <h3 class="location_title">Lăng Tự Đức</h3>
-                            <button class="btn"><span>Xem Thêm</span></button>
+                            <button class="btn" type="button" onclick="window.location.href='langTuDuc.html'"><span>Xem Thêm</span></button>
                         </div>
                     </div>
                 </div>
@@ -190,36 +188,36 @@
                 <div class="art-content-box flex-container">
                     <div class="main_item">
                         <div class="item_img">
-                            <a href="">
+                            <a href="nhaNhacCungDinh.html">
                                 <img src="./img/art_nhaNhacCungDinh.jpg" alt="">
                             </a>
                         </div>
                         <div class="item_content">
                             <div class="content_textbox">
-                                <h3 class="content_header">Nhã Nhạc Cung Đình Huế</h3>
+                                <h3 class="content_header" style="background: url(./img/art_title_background.png) 50% center / 50px;">Nhã Nhạc Cung Đình Huế</h3>
                                 <p class="content_text">Biểu tượng âm nhạc cung đinh Việt Nam</p>
                             </div>
                         </div>
                     </div>
                     <div class="main_item">
                         <div class="item_img">
-                            <a href="">
+                            <a href="tuongCungDinh.html">
                                 <img src="./img/art_tuongHue.jpg" alt="">
                             </a>
                         </div>
                         <div class="item_content">
-                            <h3 class="content_header">Tuồng Huế</h3>
+                            <h3 class="content_header" style="background: url(./img/art_title_background.png) 50% center / 50px;">Tuồng Huế</h3>
                             <p class="content_text">Hồn dân tộc vang mãi chốn cung son</p>
                         </div>
                     </div>
                     <div class="main_item">
                         <div class="item_img">
-                            <a href="">
+                            <a href="caHue.html">
                                 <img src="./img/cahue2.jpg" alt="">
                             </a>
                         </div>
                         <div class="item_content">
-                            <h3 class="content_header">Ca Huế</h3>
+                            <h3 class="content_header" style="background: url(./img/art_title_background.png) 50% center / 50px;">Ca Huế</h3>
                             <p class="content_text">Bản tình ca xứ Huế ngàn đời lưu dấu</p>
                         </div>
                     </div>
@@ -239,7 +237,7 @@
                                 <p class="textbox_text">Nơi gìn giữ tinh hoa truyền thống hơn 700 năm</p>
                             </div>
                             <div class="content_btn">
-                                <button>Tìm hiểu thêm</button>
+                                <button type="button" onclick="window.location.href='langHuongThuyXuan.html'">Tìm hiểu thêm</button>
                             </div>
                         </div>
                     </div>
@@ -253,7 +251,7 @@
                                 <p class="textbox_text">Tinh hoa kim loại hơn 400 năm lịch sử</p>
                             </div>
                             <div class="content_btn">
-                                <button>Tìm hiểu thêm</button>
+                                <button type="button" onclick="window.location.href='langPhuongDuc.html'">Tìm hiểu thêm</button>
                             </div>
                         </div>
                     </div>
@@ -267,7 +265,7 @@
                                 <p class="textbox_text">Nơi lưu giữ hồn xưa đất Huế</p>
                             </div>
                             <div class="content_btn">
-                                <button>Tìm hiểu thêm</button>
+                                <button type="button" onclick="window.location.href='langGoMyXuyen.html'">Tìm hiểu thêm</button>
                             </div>
                         </div>
                     </div>
@@ -275,7 +273,7 @@
             </div>
         </main>
 
-        <!-- Footer -->
+        
         <footer class="footer">
             <div class="footerLeft">
                 <h3 class="footer_title">Kết nối với chúng tôi</h3>
@@ -288,9 +286,10 @@
             <div class="footerMid">
                 <h3 class="footer_discover">Khám phá</h3>
                 <ul class="discoverList">
-                    <li class="discoverList_item"><a href="#">Lăng tẩm nổi tiếng</a></li>
-                    <li class="discoverList_item"><a href="#">Ẩm thực Huế</a></li>
-                    <li class="discoverList_item"><a href="#">Lễ hội truyền thống</a></li>
+                    <li class="discoverList_item"><a href="#location">Lăng tẩm nổi tiếng</a></li>
+                    <li class="discoverList_item"><a href="#food">Ẩm thực Huế</a></li>
+                    <li class="discoverList_item"><a href="#art">Lễ hội truyền thống</a></li>
+                    <li class="discoverList_item"><a href="#village">Làng nghề</a></li>
                 </ul>
             </div>
             <div class="footerRight">

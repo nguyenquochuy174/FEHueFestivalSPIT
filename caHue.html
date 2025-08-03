@@ -7,20 +7,19 @@
     <title>Ca Huế trên sông Hương</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <link rel="stylesheet" href="./caHue.css">
+    <link rel="stylesheet" href="./css/ngheThuat.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="background-blur"></div>
+        <div class="background-blur" style="background-image: url(./img/Ca_Huế_background_1.jpg);"></div>
         <header>
-            <!-- Phan dau logo, menu -->
             <div class="header-content-box">
                 <div class="logoHue">
                     <img src="./img/logoHue.png" alt="logo_1">
                 </div>
                 <div class="menu">
-                    <a href="#" class="go_back"><i class="fa fa-angle-left" style="padding-right: 5px;"></i>Trang
+                    <a href="index.html" class="go_back"><i class="fa fa-angle-left" style="padding-right: 5px;"></i>Trang
                         chủ</a>
                 </div>
                 <div class="logoTeam">
@@ -42,7 +41,6 @@
                 <img src="./img/Ca_Huế_5.jpg" alt="">
                 <img src="./img/Ca_Huế_6.jpg" alt="">
 
-                <!-- Nhân đôi để loop không bị giật -->
                 <img src="./img/Ca_Huế_1.jpg" alt="">
                 <img src="./img/Ca_Huế_2.jpg" alt="">
                 <img src="./img/Ca_Huế_3.jpg" alt="">
@@ -145,7 +143,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="footer">
             <div class="footerLeft">
                 <h3 class="footer_title">Kết nối với chúng tôi</h3>
@@ -158,9 +155,10 @@
             <div class="footerMid">
                 <h3 class="footer_discover">Khám phá</h3>
                 <ul class="discoverList">
-                    <li class="discoverList_item"><a href="#">Lăng tẩm nổi tiếng</a></li>
-                    <li class="discoverList_item"><a href="#">Ẩm thực Huế</a></li>
-                    <li class="discoverList_item"><a href="#">Lễ hội truyền thống</a></li>
+                    <li class="discoverList_item"><a href="index.html#location">Lăng tẩm nổi tiếng</a></li>
+                    <li class="discoverList_item"><a href="index.html#food">Ẩm thực Huế</a></li>
+                    <li class="discoverList_item"><a href="index.html#art">Lễ hội truyền thống</a></li>
+                    <li class="discoverList_item"><a href="index.html#village">Làng nghề</a></li>
                 </ul>
             </div>
             <div class="footerRight">
@@ -185,9 +183,9 @@
 <script>
     AOS.init(
         {
-            offset: 200,      // khoảng cách tính từ dưới lên mới bắt đầu hiện (giảm nếu muốn hiện trễ hơn)
+            offset: 200,     
             duration: 1000,
-            once: false,      // cho phép xuất hiện lại mỗi khi cuộn tới
+            once: false,      
             mirror: false
         }
     );

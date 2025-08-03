@@ -1,9 +1,5 @@
 body {
-    /* font-family: "Segoe UI", sans-serif;
-    background: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333; */
+
     line-height: 1.6;
 }
 
@@ -11,23 +7,14 @@ h2 {
     color: #415a77;
 }
 
-/* img {
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    } */
 
-/*Reset CSS*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*CSS Dung Chung*/
+
 html {
     scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
@@ -37,21 +24,19 @@ html {
     display: flex;
 }
 
-/*Lam mo background*/
 .background-blur {
     position: fixed;
     top: 0px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(./img/langMinhMang_background.jpg);
     background-size: cover;
     background-position: center;
     opacity: 0.4;
     z-index: -1;
 }
 
-/*Header CSS*/
+
 header {
     background-color: rgba(255, 255, 255, 0.8);
     grid-area: header;
@@ -94,7 +79,7 @@ header .menu:hover a {
     cursor: pointer;
 }
 
-/*CSS Noi dung*/
+
 .container {
     margin-top: 60px;
     margin-left: auto;
@@ -115,41 +100,12 @@ h2 {
     text-align: center;
 }
 
-/*Tieu de CSS*/
+
 .title .title-description {
     font-size: 20px;
 }
 
-/*Anh hover flex grow CSS*/
-/* .img-introduce {
-    margin-top: 30px;
-    display: flex;
-    width: 600px;
-    height: 200px;
-    gap: 10px;
-    border-radius: 10px;
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-.img-item {
-    flex-grow: 1;
-    background-color: #ccc;
-    transition: flex-grow 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: white;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.img-item:hover {
-    flex-grow: 4;
-    background-color: #555;
-} */
 .img-introduce {
     display: flex;
     width: 100%;
@@ -189,7 +145,7 @@ h2 {
     transform: translateX(0%);
 }
 
-/*Gioi thieu CSS*/
+
 .introduction {
     margin-top: 70px;
     background: #f5f7fa;
@@ -214,16 +170,17 @@ h2 {
 
 .introduction .introduction-content .content-img {
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .introduction .content-img img {
     display: block;
     width: 100%;
+    border-radius: 10px;
+
 }
 
-/*Vi tri CSS*/
+
 .location {
     margin-top: 30px;
     background: #f5f7fa;
@@ -246,11 +203,10 @@ h2 {
 
 .location .location-content .map-link {
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
 }
 
-/* History Section */
+
 .history {
     margin-top: 30px;
     background: #f5f7fa;
@@ -277,7 +233,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Architecture Section */
+
 .architecture {
     margin-top: 30px;
     background: #f8fafc;
@@ -307,17 +263,17 @@ h2 {
 
 .architecture-content .content-img {
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .architecture-content .content-img img {
     display: block;
+    border-radius: 10px;
     width: 100%;
 }
 
 
-/* Highlights Section */
+
 .highlights {
     margin-top: 30px;
     background: #f5f7fa;
@@ -349,20 +305,20 @@ h2 {
 
 .highlights-content .content-img {
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .highlights-content .content-img img {
     display: block;
     width: 100%;
+    border-radius: 10px;
 }
 
 .highlights-content .content-list strong {
     color: #415a77;
 }
 
-/* Meaning and Value Section */
+
 .meaning-and-value {
     margin-top: 30px;
     background: #f8fafc;
@@ -385,7 +341,7 @@ h2 {
     text-align: justify;
 }
 
-/* Footer CSS */
+
 .footer {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -473,7 +429,7 @@ h2 {
 
 
 
-/* Màn hình rất nhỏ (mobile) */
+
 @media (max-width: 480px) {
     header .header-content-box {
         justify-content: space-between;
@@ -506,13 +462,13 @@ h2 {
         padding: 0 10px;
     }
     
-    /* Gallery ảnh hover */
+
     .img-introduce {
         height: 250px;
         margin: 15px auto;
     }
     
-    /* Các section nội dung */
+
     .introduction,
     .location,
     .history,
@@ -569,7 +525,7 @@ h2 {
         font-size: 18px;
     }
     
-    /* Footer */
+
     .footer {
         flex-direction: column;
         gap: 15px;
@@ -607,7 +563,7 @@ h2 {
     }
 }
 
-/* Mobile lớn và tablet nhỏ */
+
 @media (min-width: 481px) and (max-width: 768px) {
     header .header-content-box {
         justify-content: space-between;
@@ -640,13 +596,12 @@ h2 {
         padding: 0 12px;
     }
     
-    /* Gallery ảnh hover */
     .img-introduce {
         height: 350px;
         margin: 20px auto;
     }
     
-    /* Các section nội dung */
+
     .introduction,
     .location,
     .history,
@@ -703,7 +658,7 @@ h2 {
         font-size: 20px;
     }
     
-    /* Footer */
+
     .footer {
         flex-direction: column;
         gap: 20px;
@@ -740,7 +695,7 @@ h2 {
     }
 }
 
-/* Tablet lớn */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     header .header-content-box {
         justify-content: space-between;
@@ -773,13 +728,13 @@ h2 {
         padding: 0 15px;
     }
     
-    /* Gallery ảnh hover */
+
     .img-introduce {
         height: 400px;
         margin: 25px auto;
     }
     
-    /* Các section nội dung */
+  
     .introduction,
     .location,
     .history,
@@ -834,7 +789,7 @@ h2 {
         font-size: 22px;
     }
     
-    /* Footer */
+
     .footer {
         gap: 25px;
         padding: 20px;
