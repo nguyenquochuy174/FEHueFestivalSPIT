@@ -51,7 +51,6 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(./img/dai_noi_hue_02.jpg);
     background-size: cover;
     background-position: center;
     opacity: 0.4;
@@ -207,6 +206,8 @@ html {
 .main_location {
     text-align: center;
     scroll-margin-top: 50px;
+    padding-top: 10px;
+
 }
 
 .main_location .main_title {
@@ -300,6 +301,8 @@ html {
 
 .main_food {
     scroll-margin-top: 60px;
+    padding-top: 10px;
+
 }
 
 
@@ -397,6 +400,8 @@ html {
 
 .main_art {
     scroll-margin-top: 50px;
+    padding-top: 10px;
+
 }
 
 .main_art .main_title {
@@ -451,8 +456,6 @@ html {
 .main_art .item_content .content_header {
     display: inline-block;
     padding: 10px 5px;
-    background: url(./img/art_title_background.png) 50% center / 50px;
-    ;
 }
 
 .main_art .item_content .content_text {
@@ -460,10 +463,11 @@ html {
     background-color: rgba(0, 0, 0, 0.75);
 }
 
-/* Main > Craft Village CSS */
+
 .main_craftVillage {
     text-align: center;
     scroll-margin-top: 50px;
+    padding-top: 10px;
 }
 
 .main_craftVillage .main_title {

@@ -7,21 +7,21 @@
     <title>Làng Hương Thủy Xuân</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./langHuongThuyXuan.css">
+    <link rel="stylesheet" href="./css/langNghe.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
 <body>
     <div class="container">
-        <div class="background-blur"></div>
+        <div class="background-blur" style="background-image: url(./img/Lang-huong-Thuy-Xuan-background.jpg);"></div>
         <header>
             <div class="header-content-box">
                 <div class="logoHue">
                     <img src="./img/logoHue.png" alt="logo_1">
                 </div>
                 <div class="menu">
-                    <a href="#" class="go_back"><i class="fa fa-angle-left" style="padding-right: 5px;"></i>Trang
+                    <a href="index.html" class="go_back"><i class="fa fa-angle-left" style="padding-right: 5px;"></i>Trang
                         chủ</a>
                 </div>
                 <div class="logoTeam">
@@ -52,15 +52,14 @@
                                 không
                                 gây hại sức khỏe. Người dân nơi đây quan niệm rằng hương không chỉ đơn thuần là vật phẩm
                                 dùng để thắp mà còn mang giá trị tâm linh, kết nối con người với tổ tiên, trời đất.
-                                Trong
-                                bối cảnh thị trường hiện nay
+                                Hiện nay
                                 có nhiều loại hương công nghiệp, làng Thủy Xuân vẫn giữ vững chất lượng truyền thống để
                                 bảo
                                 vệ uy tín và gìn giữ bản sắc văn hóa đặc trưng xứ Huế.
 
                             </p>
                             <div class="content-img">
-                                <img src="./img/Lang-huong-Thuy-Xuan3.jpg" alt="Làng Hương Thủy Xuân">
+                                <img src="./img/Lang-huong-Thuy-Xuan7.jpg" alt="Làng Hương Thủy Xuân">
                             </div>
                         </div>
                     </section>
@@ -126,20 +125,20 @@
                                 lâu đời của dân tộc.
                             </p>
                             <div class="content-img">
-                                <img src="./img/Lang-huong-Thuy-Xuan2.jpg" alt="Làng Hương Thủy Xuân">
+                                <img src="./img/Lang-huong-Thuy-Xuan6.jpg" alt="Làng Hương Thủy Xuân">
                             </div>
                         </div>
                     </section>
                 </div>
-                <!-- Nếu có phân trang (dots) -->
+                
                 <div class="swiper-pagination"></div>
             </div>
-            <!-- Nếu có nút điều hướng -->
+            
             <div class="swiper-button-next"><i class="fa fa-angle-right"></i></div>
             <div class="swiper-button-prev"><i class="fa fa-angle-left"></i></div>
         </div>
 
-        <!-- Footer -->
+        
         <footer class="footer">
             <div class="footerLeft">
                 <h3 class="footer_title">Kết nối với chúng tôi</h3>
@@ -152,9 +151,10 @@
             <div class="footerMid">
                 <h3 class="footer_discover">Khám phá</h3>
                 <ul class="discoverList">
-                    <li class="discoverList_item"><a href="#">Lăng tẩm nổi tiếng</a></li>
-                    <li class="discoverList_item"><a href="#">Ẩm thực Huế</a></li>
-                    <li class="discoverList_item"><a href="#">Lễ hội truyền thống</a></li>
+                    <li class="discoverList_item"><a href="index.html#location">Lăng tẩm nổi tiếng</a></li>
+                    <li class="discoverList_item"><a href="index.html#food">Ẩm thực Huế</a></li>
+                    <li class="discoverList_item"><a href="index.html#art">Lễ hội truyền thống</a></li>
+                    <li class="discoverList_item"><a href="index.html#village">Làng nghề</a></li>
                 </ul>
             </div>
             <div class="footerRight">
@@ -175,7 +175,7 @@
     </div>
     <script>
         const swiper = new Swiper('.swiper', {
-            loop: true, // lặp lại slide
+            loop: true, 
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -185,7 +185,7 @@
                 clickable: true,
             },
             autoplay: {
-                delay: 30000, // tự động chuyển sau 3 giây
+                delay: 30000, 
             },
         });
     </script>

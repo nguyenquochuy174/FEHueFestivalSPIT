@@ -1,9 +1,4 @@
 body {
-    /* font-family: "Segoe UI", sans-serif;
-    background: #f9f9f9;
-    margin: 0;
-    padding: 0;
-    color: #333; */
     line-height: 1.6;
 }
 
@@ -11,23 +6,16 @@ h2 {
     color: #415a77;
 }
 
-/* img {
-      width: 100%;
-      max-width: 800px;
-      margin: 20px auto;
-      display: block;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    } */
 
-/*Reset CSS*/
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*CSS Dung Chung*/
+
 html {
     scroll-behavior: smooth;
     font-family: Helvetica, sans-serif;
@@ -40,22 +28,23 @@ html {
 .block-container {
     display: block !important;
 }
+.pb-20{
+    padding-bottom: 20px;
+}
 
-/*Lam mo background*/
 .background-blur {
     position: fixed;
     top: 0px;
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(./img/langMinhMang_background.jpg);
     background-size: cover;
     background-position: center;
     opacity: 0.4;
     z-index: -1;
 }
 
-/*Header CSS*/
+
 header {
     background-color: rgba(255, 255, 255, 0.8);
     grid-area: header;
@@ -98,7 +87,7 @@ header .menu:hover a {
     cursor: pointer;
 }
 
-/*CSS Noi dung*/
+
 .container {
     margin-top: 60px;
     margin-left: auto;
@@ -119,39 +108,45 @@ h2 {
     text-align: center;
 }
 
-/*Tieu de CSS*/
+
 .title .title-description {
     font-size: 20px;
 }
 
-/**/
-/*CSS SLider*/
+
+
 .slider-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Khoảng cách giữa nút và slider */
     position: relative;
+    padding: 0px 10px;
 }
 
 .swiper {
     width: 1200px;
-    height: 550px;
+    height: auto;
     margin: 30px auto;
-    border-radius: 10px;
+    padding: 20px 0px;
 }
 
 .swiper-wrapper {
-    overflow: unset;
-    min-height: 200px;
+    overflow: visible;
+    align-items: stretch;
 }
 
 .swiper-slide {
     background: #fff;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-radius: 10px;
     padding: 10px 20px;
+    gap: 20px;
+}
+.swiper-pagination {
+    bottom: 3px !important;
 }
 
 .swiper-button-next,
@@ -199,16 +194,16 @@ h2 {
 
 .source .source-content .content-img {
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .source .content-img img {
     display: block;
     width: 100%;
+    border-radius: 10px;
 }
 
-/*Nghe thuat lam huong CSS*/
+
 .art-of-making .art-of-making-content {
     padding-top: 30px;
     gap: 20px;
@@ -222,17 +217,16 @@ h2 {
 
 .art-of-making .art-of-making-content .content-img {
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
 }
 
 .art-of-making .content-img img {
     display: block;
     width: 100%;
-    height: 100%;
+    border-radius: 10px;
 }
 
-/*San pham CSS*/
+
 .production .production-content {
     padding-top: 30px;
     gap: 20px;
@@ -246,15 +240,15 @@ h2 {
 
 .production .production-content .content-img {
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
 }
 .production .content-img img{
     display: block;
     width: 100%;
-    height: 100%;
+    border-radius: 10px;
+
 }
-/*Du lich CSS*/
+
 .travel .travel-content{
     padding-top: 30px;
     gap: 20px;
@@ -266,17 +260,17 @@ h2 {
 }
 .travel .travel-content .content-img{
     flex: 1;
-    border-radius: 10px;
     overflow: hidden;
-    height: 440px;
+
 }
 .travel .content-img img{
     display: block;
     width: 100%;
-    height: 100%;
+    border-radius: 10px;
+
 }
 
-/* Footer CSS */
+
 .footer {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
@@ -360,7 +354,7 @@ h2 {
     color: #000000;
 }
 
-/* Màn hình rất nhỏ (mobile) */
+
 @media (max-width: 480px) {
     header .header-content-box {
         justify-content: space-between;
@@ -598,7 +592,7 @@ h2 {
     }
 }
 
-/* Tablet lớn */
+
 @media (min-width: 769px) and (max-width: 1024px) {
     header .header-content-box {
         justify-content: space-between;
@@ -633,7 +627,7 @@ h2 {
     
     .swiper {
         width: 90%;
-        height: 450px;
+        height: auto;
         margin: 25px auto;
     }
     
@@ -699,7 +693,7 @@ h2 {
     }
 }
 
-/* Desktop nhỏ */
+
 @media (min-width: 1025px) and (max-width: 1200px) {
     header .header-content-box {
         justify-content: space-between;
@@ -734,7 +728,7 @@ h2 {
     
     .swiper {
         width: 90%;
-        height: 500px;
+        height: auto;
         margin: 30px auto;
     }
     
